@@ -1,15 +1,20 @@
 /* ============================================================
-   cursor.js — Luminous custom cursor (desktop / fine-pointer)
-   An instant dot + a lagging ring (lerped). The ring grows over
-   interactive targets. Skipped on touch / reduced-motion.
+   cursor.js — Custom cursor replacing the system cursor
+   (desktop / fine-pointer only). Tracks the pointer EXACTLY on
+   every pointermove — no easing, no lag, no trailing element.
+   Adds .has-cursor to <html> to hide the native cursor; over
+   interactive targets the reticle opens (see cursor.css).
    ============================================================ */
 
-import { lerp, isTouch, prefersReducedMotion } from '../core/utils.js';
+import { isTouch, prefersReducedMotion } from '../core/utils.js';
 
-const HOVER_TARGETS = 'a, button, [data-cursor], .glass--hover, .segmented__btn, .tile, .field input, .field textarea';
+const HOVER_TARGETS =
+  'a, button, [data-cursor], [data-magnetic], .segmented__btn, .tile, .field input, .field textarea, label';
 
 export function initCursor() {
   if (isTouch() || prefersReducedMotion()) return;
+
+  document.documentElement.classList.add('has-cursor');
 
   const cursor = document.createElement('div');
   cursor.className = 'cursor';
@@ -17,32 +22,24 @@ export function initCursor() {
   cursor.innerHTML = '<div class="cursor__ring"></div><div class="cursor__dot"></div>';
   document.body.appendChild(cursor);
 
-  const dot = cursor.querySelector('.cursor__dot');
-  const ring = cursor.querySelector('.cursor__ring');
-
-  let mx = window.innerWidth / 2, my = window.innerHeight / 2;
-  let rx = mx, ry = my;
-
+  // Exact tracking — position is set straight from the event, no smoothing.
   window.addEventListener('pointermove', (e) => {
-    mx = e.clientX; my = e.clientY;
+    cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
     cursor.classList.add('is-active');
-    dot.style.transform = `translate(${mx}px, ${my}px)`;
-  });
+  }, { passive: true });
 
-  (function loop() {
-    rx = lerp(rx, mx, 0.2);
-    ry = lerp(ry, my, 0.2);
-    ring.style.transform = `translate(${rx}px, ${ry}px)`;
-    requestAnimationFrame(loop);
-  })();
-
+  // Aperture state over interactive elements (guard against child flicker)
   document.addEventListener('pointerover', (e) => {
     if (e.target.closest(HOVER_TARGETS)) cursor.classList.add('is-hovering');
   });
   document.addEventListener('pointerout', (e) => {
-    if (e.target.closest(HOVER_TARGETS)) cursor.classList.remove('is-hovering');
+    const from = e.target.closest(HOVER_TARGETS);
+    const to = e.relatedTarget && e.relatedTarget.closest && e.relatedTarget.closest(HOVER_TARGETS);
+    if (from && !to) cursor.classList.remove('is-hovering');
   });
+
   window.addEventListener('pointerdown', () => cursor.classList.add('is-down'));
   window.addEventListener('pointerup', () => cursor.classList.remove('is-down'));
   document.addEventListener('mouseleave', () => cursor.classList.remove('is-active'));
+  document.addEventListener('mouseenter', () => cursor.classList.add('is-active'));
 }
