@@ -148,7 +148,36 @@ vercel --prod       # für die Live-Version
 
 ---
 
-## 10. Schrift & Lizenz
+## 10. Sicherheit (CSP) — beim Einbinden externer Inhalte beachten
+
+Auf Vercel sendet die Seite strenge Security-Header (in **`vercel.json`**), u. a. eine
+**Content-Security-Policy (CSP)**. Die CSP erlaubt standardmäßig **nur Inhalte von der
+eigenen Domain** — gut für die Sicherheit, aber:
+
+> Wenn du etwas **Externes** einbaust (Google Fonts, ein YouTube-/Vimeo-Video,
+> Analytics, ein Skript von einem CDN, Bilder von einer fremden Domain), wird es
+> **blockiert**, bis du die Quelle in der CSP freigibst.
+
+Quelle freigeben = in `vercel.json` die passende Direktive in der `Content-Security-Policy`
+erweitern, z. B.:
+- externe **Bilder**: `img-src 'self' data: https://bilder.example.com`
+- **YouTube-Embed**: `frame-src https://www.youtube-nocookie.com` ergänzen
+- **Google Fonts**: `style-src … https://fonts.googleapis.com` **und** `font-src 'self' https://fonts.gstatic.com`
+- externes **Skript**: `script-src 'self' 'sha256-…' https://cdn.example.com`
+
+**Wenn du das kleine Inline-Script im `<head>` änderst**
+(`document.documentElement.classList.add('js')`), stimmt der Hash in der CSP nicht mehr →
+neuen berechnen und als `'sha256-…'` in `script-src` eintragen:
+```bash
+printf "%s" "DEIN-SCRIPT-INHALT" | openssl dgst -sha256 -binary | openssl base64
+```
+(Einfacher: solche Logik in eine `.js`-Datei auslagern statt inline.)
+
+> Tipp: Nach dem Deploy die Header auf <https://securityheaders.com> prüfen — sollte „A“ geben.
+
+---
+
+## 11. Schrift & Lizenz
 
 Schrift **Lineal** (Velvetyne, SIL Open Font License) liegt unter
 `assets/fonts/lineal/` inkl. Lizenz (`OFL.txt`) und ist in der Fußzeile genannt.
