@@ -1,0 +1,30 @@
+/* ============================================================
+   main.css — AETHER stylesheet entry point
+   Imports the cascade in order: tokens → reset → type → utils →
+   animations → components → sections. Link only this file in HTML.
+   ============================================================ */
+
+/* base */
+@import url("base/tokens.css");
+@import url("base/reset.css");
+@import url("base/typography.css");
+@import url("base/utilities.css");
+@import url("base/animations.css");
+
+/* components */
+@import url("components/ambient.css");
+@import url("components/glass.css");
+@import url("components/cursor.css");
+@import url("components/nav.css");
+@import url("components/buttons.css");
+@import url("components/cards.css");
+@import url("components/selector.css");
+@import url("components/marquee.css");
+@import url("components/footer.css");
+
+/* sections */
+@import url("sections/hero.css");
+@import url("sections/manifesto.css");
+@import url("sections/showcase.css");
+@import url("sections/cta.css");
+@import url("sections/page.css");

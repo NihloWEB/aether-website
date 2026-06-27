@@ -1,0 +1,56 @@
+/* ============================================================
+   footer.css — Site footer
+   ============================================================ */
+
+.footer { position: relative; padding-block: clamp(64px, 9vh, 120px) var(--s-7); }
+
+.footer__top {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: var(--s-7);
+  padding-bottom: var(--s-8);
+}
+.footer__brand-line {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2rem, 6vw, 4rem);
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+}
+.footer__col h4 {
+  font-size: var(--t-eyebrow);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: var(--s-4);
+}
+.footer__col ul { display: flex; flex-direction: column; gap: var(--s-3); }
+.footer__col a { color: var(--ink-2); transition: color var(--dur-1) var(--ease-out); width: fit-content; }
+.footer__col a:hover { color: var(--ink); }
+
+.footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-4);
+  padding-top: var(--s-6);
+  border-top: 1px solid var(--line);
+  color: var(--ink-3);
+  font-size: var(--t-small);
+}
+.footer__credit a { color: var(--ink-2); border-bottom: 1px solid var(--line); }
+.footer__credit a:hover { color: var(--ink); }
+
+.to-top {
+  display: inline-flex; align-items: center; gap: 0.5em;
+  color: var(--ink-2); font-size: var(--t-small); font-weight: 600;
+}
+.to-top:hover { color: var(--ink); }
+.to-top svg { width: 16px; height: 16px; transition: transform var(--dur-1) var(--ease-out); }
+.to-top:hover svg { transform: translateY(-3px); }
+
+@media (max-width: 760px) {
+  .footer__top { grid-template-columns: 1fr 1fr; }
+  .footer__brand-line { grid-column: 1 / -1; }
+}

@@ -1,0 +1,51 @@
+/* ============================================================
+   manifesto.css — Pinned statement; words brighten on scroll
+   The tall section gives scroll distance; the text sticks centered.
+   js/effects/text-reveal.js lights words by scroll progress.
+   ============================================================ */
+
+.manifesto { position: relative; height: 220vh; }
+
+.manifesto__sticky {
+  position: sticky;
+  top: 0;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding-block: var(--s-9);
+}
+
+.manifesto__text {
+  max-width: 22ch;
+  margin-inline: auto;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.9rem, 5.4vw, 4.4rem);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  text-align: center;
+  text-wrap: balance;
+}
+.manifesto__word {
+  color: var(--ink-4);
+  transition: color 0.18s var(--ease-out);
+}
+.manifesto__word.is-lit { color: var(--ink); }
+
+.manifesto__sig {
+  display: block;
+  margin-top: var(--s-7);
+  font-family: var(--font-sans);
+  font-size: var(--t-small);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+/* Fallback when sticky/scroll-driven highlight isn't running */
+@media (prefers-reduced-motion: reduce) {
+  .manifesto { height: auto; }
+  .manifesto__sticky { position: static; min-height: 0; }
+  .manifesto__word { color: var(--ink); }
+}

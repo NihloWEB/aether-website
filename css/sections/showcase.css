@@ -1,0 +1,63 @@
+/* ============================================================
+   showcase.css — Pinned horizontal rail scrubbed by vertical scroll
+   js/effects/horizontal.js translates the track from page scroll.
+   On touch / reduced-motion it degrades to a native swipe rail.
+   ============================================================ */
+
+.showcase { position: relative; }
+.showcase[data-horizontal] { height: 320vh; }
+
+.showcase__pin {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--s-6);
+  overflow: hidden;
+}
+
+.showcase__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--s-5);
+  max-width: var(--maxw);
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+.showcase__progress {
+  width: 120px; height: 3px;
+  border-radius: 3px;
+  background: var(--line);
+  overflow: hidden;
+}
+.showcase__progress i {
+  display: block; height: 100%; width: 100%;
+  background: var(--ink);
+  transform: scaleX(var(--p, 0));
+  transform-origin: left;
+}
+
+.showcase__track {
+  display: flex;
+  gap: clamp(16px, 2vw, 28px);
+  padding-inline: var(--gutter);
+  will-change: transform;
+}
+
+/* Touch / reduced-motion fallback: native horizontal scroll-snap */
+@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .showcase[data-horizontal] { height: auto; }
+  .showcase__pin { position: static; height: auto; padding-block: var(--s-8); }
+  .showcase__track {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: var(--s-4);
+  }
+  .showcase__track .tile { scroll-snap-align: center; }
+  .showcase__progress { display: none; }
+}

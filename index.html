@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>AETHER — Creative Studio for What Comes Next</title>
+  <meta name="description" content="AETHER is an independent creative studio building brand identities, motion and interfaces that feel alive — for the brands defining what comes next." />
+  <meta name="theme-color" content="#050507" />
+  <meta name="color-scheme" content="dark" />
+
+  <!-- Prevent reveal flash before JS, and signal no-JS fallback -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Preload the most-used type so the headline paints sharp -->
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/lineal/LinealVF.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/lineal/Lineal-Regular.woff2" crossorigin />
+
+  <link rel="stylesheet" href="css/main.css" />
+  <script type="module" src="js/main.js"></script>
+</head>
+<body id="top">
+
+  <!-- ====================== Ambient living background ====================== -->
+  <div class="bg-field deco" aria-hidden="true">
+    <div class="bg-field__orb bg-field__orb--a"></div>
+    <div class="bg-field__orb bg-field__orb--b"></div>
+    <div class="bg-field__orb bg-field__orb--c"></div>
+    <div class="bg-field__grain"></div>
+    <div class="bg-field__vignette"></div>
+  </div>
+
+  <a class="visually-hidden" href="#main">Skip to content</a>
+
+  <!-- ============================== Navigation ============================== -->
+  <header class="nav" data-nav>
+    <div class="nav__inner glass glass--bar">
+      <a class="nav__brand" href="index.html" aria-label="AETHER — home">
+        <span class="mark deco"></span>AETHER
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a class="nav__link" href="pages/overview.html" data-en="Overview" data-de="Überblick">Overview</a>
+        <a class="nav__link" href="pages/tech.html" data-en="Tech" data-de="Technik">Tech</a>
+        <a class="nav__link" href="pages/showcase.html" data-en="Showcase" data-de="Showcase">Showcase</a>
+        <a class="nav__link" href="pages/about.html" data-en="About" data-de="Über uns">About</a>
+      </nav>
+
+      <div class="nav__controls">
+        <div class="lang-toggle" role="group" aria-label="Language / Sprache">
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="de">DE</button>
+        </div>
+        <a class="btn btn--solid btn--sm" href="pages/contact.html" data-magnetic="0.3"
+           data-en="Contact" data-de="Kontakt">Contact</a>
+        <button class="icon-btn nav__burger" data-burger aria-expanded="false"
+                data-en-aria="Open menu" data-de-aria="Menü öffnen" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================= Full-screen menu ========================= -->
+  <div class="nav-menu" data-menu>
+    <nav class="nav-menu__list" aria-label="All pages">
+      <span class="nav-menu__item"><a class="nav-menu__link" href="pages/overview.html"><span class="idx">01</span><span data-en="Overview" data-de="Überblick">Overview</span></a></span>
+      <span class="nav-menu__item"><a class="nav-menu__link" href="pages/tech.html"><span class="idx">02</span><span data-en="Tech" data-de="Technik">Tech</span></a></span>
+      <span class="nav-menu__item"><a class="nav-menu__link" href="pages/showcase.html"><span class="idx">03</span><span data-en="Showcase" data-de="Showcase">Showcase</span></a></span>
+      <span class="nav-menu__item"><a class="nav-menu__link" href="pages/about.html"><span class="idx">04</span><span data-en="About" data-de="Über uns">About</span></a></span>
+      <span class="nav-menu__item"><a class="nav-menu__link" href="pages/contact.html"><span class="idx">05</span><span data-en="Contact" data-de="Kontakt">Contact</span></a></span>
+    </nav>
+    <div class="nav-menu__meta">
+      <span>Berlin · Remote</span>
+      <span>hello@aether.studio</span>
+      <span data-en="Open for Q3 2026" data-de="Verfügbar ab Q3 2026">Open for Q3 2026</span>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ================================ HERO ================================ -->
+    <section class="hero container" data-hero>
+      <div class="hero__light deco"></div>
+
+      <div class="hero__floaties deco" aria-hidden="true">
+        <span class="hero__chip hero__chip--1 glass glass--pill"><span class="dot"></span><span data-en="Brand" data-de="Marke">Brand</span></span>
+        <span class="hero__chip hero__chip--2 glass glass--pill"><span class="dot"></span><span data-en="Motion" data-de="Motion">Motion</span></span>
+        <span class="hero__chip hero__chip--3 glass glass--pill"><span class="dot"></span><span data-en="Spatial" data-de="Räumlich">Spatial</span></span>
+      </div>
+
+      <div class="hero__inner">
+        <span class="eyebrow hero__eyebrow"><span class="pip deco"></span><span data-en="Independent creative studio" data-de="Unabhängiges Kreativstudio">Independent creative studio</span></span>
+
+        <h1 class="hero__title">
+          <span class="line"><span data-en="We craft" data-de="Wir gestalten">We craft</span></span>
+          <span class="line"><span data-en="brands that" data-de="Marken, die">brands that</span></span>
+          <span class="line"><span class="accent" data-en="feel alive." data-de="lebendig sind.">feel alive.</span></span>
+        </h1>
+
+        <p class="hero__lead" data-en="AETHER is a design studio shaping identities, motion and interfaces that move — for the brands defining what comes next."
+           data-de="AETHER ist ein Designstudio für Identitäten, Motion und Interfaces, die sich bewegen — für die Marken von morgen.">
+          AETHER is a design studio shaping identities, motion and interfaces that move — for the brands defining what comes next.
+        </p>
+
+        <div class="hero__cta">
+          <a class="btn btn--solid btn--lg" href="pages/showcase.html" data-magnetic="0.4">
+            <span data-en="View work" data-de="Arbeiten ansehen">View work</span>
+            <svg class="btn__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--glass btn--lg" href="pages/contact.html" data-magnetic="0.4"
+             data-en="Start a project" data-de="Projekt starten">Start a project</a>
+        </div>
+      </div>
+
+      <a class="hero__cue" href="#capabilities" aria-hidden="true">
+        <span class="track deco"></span>
+        <span data-en="Scroll" data-de="Scrollen">Scroll</span>
+      </a>
+    </section>
+
+    <!-- ============================== MARQUEE ============================== -->
+    <section class="section--tight" aria-label="Disciplines">
+      <div class="marquee" data-reveal="fade">
+        <div class="marquee__track" aria-hidden="false">
+          <span class="marquee__item">Brand Identity</span><span class="marquee__item">Motion</span><span class="marquee__item">Interface</span><span class="marquee__item">Spatial</span><span class="marquee__item">Art Direction</span><span class="marquee__item">Strategy</span>
+        </div>
+        <div class="marquee__track" aria-hidden="true">
+          <span class="marquee__item">Brand Identity</span><span class="marquee__item">Motion</span><span class="marquee__item">Interface</span><span class="marquee__item">Spatial</span><span class="marquee__item">Art Direction</span><span class="marquee__item">Strategy</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= MANIFESTO ============================= -->
+    <section class="manifesto" data-text-reveal>
+      <div class="manifesto__sticky container">
+        <p class="manifesto__text" data-words
+           data-words-en="We believe design should breathe — every surface, every motion, every detail alive, intentional, unforgettable."
+           data-words-de="Wir glauben, Design sollte atmen — jede Fläche, jede Bewegung, jedes Detail lebendig, bewusst, unvergesslich."></p>
+        <span class="manifesto__sig" data-en="The AETHER principle" data-de="Das AETHER-Prinzip">The AETHER principle</span>
+      </div>
+    </section>
+
+    <!-- ===================== CAPABILITIES (selections) ===================== -->
+    <section class="section" id="capabilities">
+      <div class="container selector" data-selector>
+        <div class="section-head section-head--center" data-reveal>
+          <span class="eyebrow" data-en="Capabilities" data-de="Leistungen">Capabilities</span>
+          <h2 class="section-head__title" data-en="Four disciplines. One signature." data-de="Vier Disziplinen. Eine Handschrift.">Four disciplines. One signature.</h2>
+        </div>
+
+        <div class="segmented glass glass--pill" role="tablist" data-reveal="scale" aria-label="Select a discipline">
+          <span class="segmented__thumb deco"></span>
+          <button type="button" class="segmented__btn is-active" data-en="Brand" data-de="Marke">Brand</button>
+          <button type="button" class="segmented__btn" data-en="Motion" data-de="Motion">Motion</button>
+          <button type="button" class="segmented__btn" data-en="Interface" data-de="Interface">Interface</button>
+          <button type="button" class="segmented__btn" data-en="Spatial" data-de="Räumlich">Spatial</button>
+        </div>
+
+        <div class="selector__stage">
+          <!-- Brand -->
+          <article class="selector__panel is-active">
+            <div class="selector__copy">
+              <h3 data-en="Brand systems" data-de="Markensysteme">Brand systems</h3>
+              <p class="muted measure" data-en="Identities built as living systems — logotype, type, color and voice that adapt across every surface without losing their soul."
+                 data-de="Identitäten als lebendige Systeme — Logotype, Schrift, Farbe und Tonalität, die sich überall anpassen, ohne ihre Seele zu verlieren.">Identities built as living systems — logotype, type, color and voice that adapt across every surface without losing their soul.</p>
+              <div class="selector__list">
+                <span class="selector__chip" data-en="Identity" data-de="Identität">Identity</span>
+                <span class="selector__chip" data-en="Naming" data-de="Naming">Naming</span>
+                <span class="selector__chip" data-en="Guidelines" data-de="Richtlinien">Guidelines</span>
+                <span class="selector__chip" data-en="Type design" data-de="Schriftdesign">Type design</span>
+              </div>
+            </div>
+            <div class="selector__visual glass"><div class="selector__visual-art deco"></div><span class="selector__glyph">B</span></div>
+          </article>
+          <!-- Motion -->
+          <article class="selector__panel">
+            <div class="selector__copy">
+              <h3 data-en="Motion & film" data-de="Motion & Film">Motion & film</h3>
+              <p class="muted measure" data-en="Story told in movement. Title sequences, product films and micro-interactions tuned frame by frame to feel inevitable."
+                 data-de="Geschichten in Bewegung. Titelsequenzen, Produktfilme und Mikrointeraktionen — Bild für Bild auf den Punkt gebracht.">Story told in movement. Title sequences, product films and micro-interactions tuned frame by frame to feel inevitable.</p>
+              <div class="selector__list">
+                <span class="selector__chip" data-en="Title design" data-de="Titeldesign">Title design</span>
+                <span class="selector__chip" data-en="3D" data-de="3D">3D</span>
+                <span class="selector__chip" data-en="Sound" data-de="Sound">Sound</span>
+                <span class="selector__chip" data-en="Direction" data-de="Regie">Direction</span>
+              </div>
+            </div>
+            <div class="selector__visual glass"><div class="selector__visual-art deco"></div><span class="selector__glyph">M</span></div>
+          </article>
+          <!-- Interface -->
+          <article class="selector__panel">
+            <div class="selector__copy">
+              <h3 data-en="Interfaces" data-de="Interfaces">Interfaces</h3>
+              <p class="muted measure" data-en="Digital products with craft in every pixel — design systems, prototypes and front-end engineering that ship and scale."
+                 data-de="Digitale Produkte mit Handwerk in jedem Pixel — Designsysteme, Prototypen und Frontend-Engineering, das skaliert.">Digital products with craft in every pixel — design systems, prototypes and front-end engineering that ship and scale.</p>
+              <div class="selector__list">
+                <span class="selector__chip" data-en="Product UI" data-de="Produkt-UI">Product UI</span>
+                <span class="selector__chip" data-en="Design systems" data-de="Designsysteme">Design systems</span>
+                <span class="selector__chip" data-en="Prototyping" data-de="Prototyping">Prototyping</span>
+                <span class="selector__chip" data-en="Front-end" data-de="Frontend">Front-end</span>
+              </div>
+            </div>
+            <div class="selector__visual glass"><div class="selector__visual-art deco"></div><span class="selector__glyph">I</span></div>
+          </article>
+          <!-- Spatial -->
+          <article class="selector__panel">
+            <div class="selector__copy">
+              <h3 data-en="Spatial & immersive" data-de="Räumlich & immersiv">Spatial & immersive</h3>
+              <p class="muted measure" data-en="Experiences you can step into — installations, real-time 3D and interfaces for the spatial computing era."
+                 data-de="Erlebnisse zum Betreten — Installationen, Echtzeit-3D und Interfaces für das räumliche Computing.">Experiences you can step into — installations, real-time 3D and interfaces for the spatial computing era.</p>
+              <div class="selector__list">
+                <span class="selector__chip" data-en="Installations" data-de="Installationen">Installations</span>
+                <span class="selector__chip" data-en="Real-time 3D" data-de="Echtzeit-3D">Real-time 3D</span>
+                <span class="selector__chip" data-en="WebGL" data-de="WebGL">WebGL</span>
+                <span class="selector__chip" data-en="XR" data-de="XR">XR</span>
+              </div>
+            </div>
+            <div class="selector__visual glass"><div class="selector__visual-art deco"></div><span class="selector__glyph">S</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== SHOWCASE ============================== -->
+    <section class="showcase" data-horizontal id="work">
+      <div class="showcase__pin">
+        <div class="showcase__head">
+          <div>
+            <span class="eyebrow" data-en="Selected work" data-de="Ausgewählte Arbeiten">Selected work</span>
+            <h2 class="section-head__title" data-en="A few recent worlds." data-de="Einige neue Welten.">A few recent worlds.</h2>
+          </div>
+          <div class="showcase__progress deco" aria-hidden="true"><i></i></div>
+        </div>
+
+        <div class="showcase__track">
+          <article class="tile"><div class="tile__media deco" style="--tile-angle:35deg"></div><div class="tile__overlay deco"></div><span class="tile__tag" data-en="Brand" data-de="Marke">Brand</span><h3 class="tile__title">Helix</h3><p class="tile__meta" data-en="Identity system · 2025" data-de="Identitätssystem · 2025">Identity system · 2025</p></article>
+          <article class="tile"><div class="tile__media deco" style="--tile-angle:120deg"></div><div class="tile__overlay deco"></div><span class="tile__tag" data-en="Motion" data-de="Motion">Motion</span><h3 class="tile__title">Northwind</h3><p class="tile__meta" data-en="Title sequence · 2025" data-de="Titelsequenz · 2025">Title sequence · 2025</p></article>
+          <article class="tile"><div class="tile__media deco" style="--tile-angle:75deg"></div><div class="tile__overlay deco"></div><span class="tile__tag" data-en="Interface" data-de="Interface">Interface</span><h3 class="tile__title">Aurora OS</h3><p class="tile__meta" data-en="Product design · 2024" data-de="Produktdesign · 2024">Product design · 2024</p></article>
+          <article class="tile"><div class="tile__media deco" style="--tile-angle:160deg"></div><div class="tile__overlay deco"></div><span class="tile__tag" data-en="Spatial" data-de="Räumlich">Spatial</span><h3 class="tile__title">Monolith</h3><p class="tile__meta" data-en="Installation · 2024" data-de="Installation · 2024">Installation · 2024</p></article>
+          <article class="tile"><div class="tile__media deco" style="--tile-angle:95deg"></div><div class="tile__overlay deco"></div><span class="tile__tag" data-en="Web" data-de="Web">Web</span><h3 class="tile__title">Veil</h3><p class="tile__meta" data-en="Site of the year · 2023" data-de="Site des Jahres · 2023">Site of the year · 2023</p></article>
+          <article class="tile"><div class="tile__media deco" style="--tile-angle:50deg"></div><div class="tile__overlay deco"></div><span class="tile__tag" data-en="Film" data-de="Film">Film</span><h3 class="tile__title">Pulse</h3><p class="tile__meta" data-en="Brand film · 2023" data-de="Markenfilm · 2023">Brand film · 2023</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================== STATS =============================== -->
+    <section class="section">
+      <div class="container stats-grid" data-reveal-group="120">
+        <div class="stat glass glass--card" data-reveal><span class="stat__num tnum"><span data-count="120" data-suffix="+">0</span></span><span class="stat__label" data-en="Projects shipped" data-de="Projekte umgesetzt">Projects shipped</span></div>
+        <div class="stat glass glass--card" data-reveal><span class="stat__num tnum"><span data-count="18">0</span></span><span class="stat__label" data-en="Awards" data-de="Auszeichnungen">Awards</span></div>
+        <div class="stat glass glass--card" data-reveal><span class="stat__num tnum"><span data-count="9">0</span></span><span class="stat__label" data-en="Years in motion" data-de="Jahre in Bewegung">Years in motion</span></div>
+        <div class="stat glass glass--card" data-reveal><span class="stat__num tnum"><span data-count="14">0</span></span><span class="stat__label" data-en="People worldwide" data-de="Menschen weltweit">People worldwide</span></div>
+      </div>
+    </section>
+
+    <!-- ============================== PROCESS ============================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow" data-en="How we work" data-de="Arbeitsweise">How we work</span>
+          <h2 class="section-head__title" data-en="From spark to signal." data-de="Vom Funken zum Signal.">From spark to signal.</h2>
+        </div>
+        <div class="steps" data-reveal-group="110">
+          <div class="step glass" data-reveal><span class="step__no">01</span><div><h3 class="step__title" data-en="Discover" data-de="Entdecken">Discover</h3><p class="step__text" data-en="We dig into your world — audience, ambition and the tension worth designing around." data-de="Wir tauchen in Ihre Welt ein — Zielgruppe, Ambition und die Spannung, um die es sich zu gestalten lohnt.">We dig into your world — audience, ambition and the tension worth designing around.</p></div></div>
+          <div class="step glass" data-reveal><span class="step__no">02</span><div><h3 class="step__title" data-en="Design" data-de="Gestalten">Design</h3><p class="step__text" data-en="We shape the system in the open — fast, tactile, motion-first, never precious." data-de="Wir formen das System offen — schnell, greifbar, motion-first, nie verkrampft.">We shape the system in the open — fast, tactile, motion-first, never precious.</p></div></div>
+          <div class="step glass" data-reveal><span class="step__no">03</span><div><h3 class="step__title" data-en="Deliver" data-de="Umsetzen">Deliver</h3><p class="step__text" data-en="We build it for real and hand over a living toolkit your team can run with." data-de="Wir setzen es wirklich um und übergeben ein lebendiges Toolkit für Ihr Team.">We build it for real and hand over a living toolkit your team can run with.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================== CTA =============================== -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band__inner glass glass--strong" data-tilt="3" data-reveal="scale">
+          <div class="cta-band__glow deco"></div>
+          <h2 class="cta-band__title" data-en="Let's build something alive." data-de="Bauen wir etwas Lebendiges.">Let's build something alive.</h2>
+          <p class="cta-band__sub" data-en="Have a brand, a product or a wild idea? We'd love to hear where you're headed."
+             data-de="Eine Marke, ein Produkt oder eine kühne Idee? Wir hören, wohin die Reise geht.">Have a brand, a product or a wild idea? We'd love to hear where you're headed.</p>
+          <div class="cta-band__actions">
+            <a class="btn btn--solid btn--lg" href="pages/contact.html" data-magnetic="0.4">
+              <span data-en="Start a project" data-de="Projekt starten">Start a project</span>
+              <svg class="btn__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--ghost btn--lg" href="pages/about.html" data-magnetic="0.3" data-en="Meet the studio" data-de="Studio kennenlernen">Meet the studio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =============================== FOOTER =============================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <div class="footer__brand-line">AETHER</div>
+          <p class="muted measure-sm" data-en="A creative studio for what comes next. Berlin & everywhere."
+             data-de="Ein Kreativstudio für das, was kommt. Berlin & überall.">A creative studio for what comes next. Berlin & everywhere.</p>
+          <div style="margin-top:var(--s-5)"><span class="placeholder" data-en="Newsletter — coming soon" data-de="Newsletter — bald verfügbar">Newsletter — coming soon</span></div>
+        </div>
+        <div class="footer__col">
+          <h4 data-en="Studio" data-de="Studio">Studio</h4>
+          <ul>
+            <li><a href="pages/overview.html" data-en="Overview" data-de="Überblick">Overview</a></li>
+            <li><a href="pages/tech.html" data-en="Tech" data-de="Technik">Tech</a></li>
+            <li><a href="pages/showcase.html" data-en="Showcase" data-de="Showcase">Showcase</a></li>
+            <li><a href="pages/about.html" data-en="About" data-de="Über uns">About</a></li>
+            <li><a href="pages/contact.html" data-en="Contact" data-de="Kontakt">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 data-en="Connect" data-de="Kontakt">Connect</h4>
+          <ul>
+            <li><a href="#" data-cursor>Instagram</a></li>
+            <li><a href="#" data-cursor>Behance</a></li>
+            <li><a href="#" data-cursor>LinkedIn</a></li>
+            <li><a href="#" data-cursor data-en="Read.cv" data-de="Read.cv">Read.cv</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> AETHER. <span data-en="All rights reserved." data-de="Alle Rechte vorbehalten.">All rights reserved.</span></span>
+        <span class="footer__credit">Typeface: <a href="https://velvetyne.fr/fonts/lineal/" target="_blank" rel="noopener">Lineal</a> · Velvetyne (OFL)</span>
+        <a class="to-top" href="#top">
+          <span data-en="Back to top" data-de="Nach oben">Back to top</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

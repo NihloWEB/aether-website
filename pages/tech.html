@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Tech — AETHER</title>
+  <meta name="description" content="How AETHER builds: real-time 3D, motion systems, design tokens, performance and accessibility as craft." />
+  <meta name="theme-color" content="#050507" />
+  <meta name="color-scheme" content="dark" />
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/lineal/LinealVF.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/lineal/Lineal-Regular.woff2" crossorigin />
+  <link rel="stylesheet" href="../css/main.css" />
+  <script type="module" src="../js/main.js"></script>
+</head>
+<body id="top">
+
+  <div class="bg-field deco" aria-hidden="true">
+    <div class="bg-field__orb bg-field__orb--a"></div><div class="bg-field__orb bg-field__orb--b"></div><div class="bg-field__orb bg-field__orb--c"></div>
+    <div class="bg-field__grain"></div><div class="bg-field__vignette"></div>
+  </div>
+
+  <a class="visually-hidden" href="#main">Skip to content</a>
+
+  <header class="nav" data-nav>
+    <div class="nav__inner glass glass--bar">
+      <a class="nav__brand" href="../index.html" aria-label="AETHER — home"><span class="mark deco"></span>AETHER</a>
+      <nav class="nav__links" aria-label="Primary">
+        <a class="nav__link" href="overview.html" data-en="Overview" data-de="Überblick">Overview</a>
+        <a class="nav__link" href="tech.html" data-en="Tech" data-de="Technik">Tech</a>
+        <a class="nav__link" href="showcase.html" data-en="Showcase" data-de="Showcase">Showcase</a>
+        <a class="nav__link" href="about.html" data-en="About" data-de="Über uns">About</a>
+      </nav>
+      <div class="nav__controls">
+        <div class="lang-toggle" role="group" aria-label="Language / Sprache"><button type="button" data-lang="en">EN</button><button type="button" data-lang="de">DE</button></div>
+        <a class="btn btn--solid btn--sm" href="contact.html" data-magnetic="0.3" data-en="Contact" data-de="Kontakt">Contact</a>
+        <button class="icon-btn nav__burger" data-burger aria-expanded="false" data-en-aria="Open menu" data-de-aria="Menü öffnen" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-menu" data-menu>
+    <nav class="nav-menu__list" aria-label="All pages">
+      <span class="nav-menu__item"><a class="nav-menu__link" href="overview.html"><span class="idx">01</span><span data-en="Overview" data-de="Überblick">Overview</span></a></span>
+      <span class="nav-menu__item"><a class="nav-menu__link" href="tech.html"><span class="idx">02</span><span data-en="Tech" data-de="Technik">Tech</span></a></span>
+      <span class="nav-menu__item"><a class="nav-menu__link" href="showcase.html"><span class="idx">03</span><span data-en="Showcase" data-de="Showcase">Showcase</span></a></span>
+      <span class="nav-menu__item"><a class="nav-menu__link" href="about.html"><span class="idx">04</span><span data-en="About" data-de="Über uns">About</span></a></span>
+      <span class="nav-menu__item"><a class="nav-menu__link" href="contact.html"><span class="idx">05</span><span data-en="Contact" data-de="Kontakt">Contact</span></a></span>
+    </nav>
+    <div class="nav-menu__meta"><span>Berlin · Remote</span><span>hello@aether.studio</span><span data-en="Open for Q3 2026" data-de="Verfügbar ab Q3 2026">Open for Q3 2026</span></div>
+  </div>
+
+  <main id="main">
+
+    <section class="page-hero container">
+      <div class="page-hero__light deco"></div>
+      <span class="eyebrow page-hero__eyebrow" data-reveal="fade" data-en="Tech" data-de="Technik">Tech</span>
+      <h1 class="page-hero__title ink-shine" data-reveal data-en="Craft, engineered." data-de="Handwerk, technisch gedacht.">Craft, engineered.</h1>
+      <p class="page-hero__lead" data-reveal data-en="Beautiful is not enough. We engineer our work to be fast, accessible and alive on every device — design and code as one discipline."
+         data-de="Schön allein genügt nicht. Wir bauen unsere Arbeit schnell, zugänglich und lebendig auf jedem Gerät — Design und Code als eine Disziplin.">Beautiful is not enough. We engineer our work to be fast, accessible and alive on every device — design and code as one discipline.</p>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow" data-en="The stack" data-de="Der Stack">The stack</span>
+          <h2 class="section-head__title" data-en="What powers the work." data-de="Was die Arbeit antreibt.">What powers the work.</h2>
+        </div>
+        <div class="grid-3" data-reveal-group="90">
+          <article class="card glass" data-reveal data-tilt="4"><span class="card__num">01</span><h3 class="card__title" data-en="Real-time 3D" data-de="Echtzeit-3D">Real-time 3D</h3><p class="card__text" data-en="WebGL & WebGPU pipelines for interactive worlds that run in the browser." data-de="WebGL- & WebGPU-Pipelines für interaktive Welten direkt im Browser.">WebGL & WebGPU pipelines for interactive worlds that run in the browser.</p></article>
+          <article class="card glass" data-reveal data-tilt="4"><span class="card__num">02</span><h3 class="card__title" data-en="Motion systems" data-de="Motion-Systeme">Motion systems</h3><p class="card__text" data-en="Scroll-driven choreography and physics-based easing, tuned for 60fps." data-de="Scroll-Choreografie und physikbasiertes Easing, abgestimmt auf 60fps.">Scroll-driven choreography and physics-based easing, tuned for 60fps.</p></article>
+          <article class="card glass" data-reveal data-tilt="4"><span class="card__num">03</span><h3 class="card__title" data-en="Design tokens" data-de="Design-Tokens">Design tokens</h3><p class="card__text" data-en="One source of truth that flows from Figma to production CSS." data-de="Eine einzige Quelle der Wahrheit — von Figma bis zum produktiven CSS.">One source of truth that flows from Figma to production CSS.</p></article>
+          <article class="card glass" data-reveal data-tilt="4"><span class="card__num">04</span><h3 class="card__title" data-en="Performance" data-de="Performance">Performance</h3><p class="card__text" data-en="Budgets, lazy media and GPU-friendly transforms — speed as a feature." data-de="Budgets, Lazy-Media und GPU-freundliche Transforms — Tempo als Feature.">Budgets, lazy media and GPU-friendly transforms — speed as a feature.</p></article>
+          <article class="card glass" data-reveal data-tilt="4"><span class="card__num">05</span><h3 class="card__title" data-en="Accessibility" data-de="Barrierefreiheit">Accessibility</h3><p class="card__text" data-en="Reduced-motion, keyboard paths and contrast baked in, not bolted on." data-de="Reduced-Motion, Tastaturpfade und Kontrast von Anfang an mitgedacht.">Reduced-motion, keyboard paths and contrast baked in, not bolted on.</p></article>
+          <article class="card glass" data-reveal data-tilt="4"><span class="card__num">06</span><h3 class="card__title" data-en="Headless" data-de="Headless">Headless</h3><p class="card__text" data-en="Composable, headless front-ends that your team can own and extend." data-de="Komponierbare, headless Frontends, die Ihr Team selbst weiterführt.">Composable, headless front-ends that your team can own and extend.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow" data-en="Principles" data-de="Prinzipien">Principles</span>
+          <h2 class="section-head__title" data-en="How we keep it alive." data-de="Wie wir es lebendig halten.">How we keep it alive.</h2>
+        </div>
+        <div class="steps" data-reveal-group="110">
+          <div class="step glass" data-reveal><span class="step__no">01</span><div><h3 class="step__title" data-en="Motion with meaning" data-de="Motion mit Bedeutung">Motion with meaning</h3><p class="step__text" data-en="Every animation earns its place — it guides, it never distracts." data-de="Jede Animation hat einen Zweck — sie führt, statt abzulenken.">Every animation earns its place — it guides, it never distracts.</p></div></div>
+          <div class="step glass" data-reveal><span class="step__no">02</span><div><h3 class="step__title" data-en="Respect the user" data-de="Den Nutzer respektieren">Respect the user</h3><p class="step__text" data-en="We honour reduced-motion and slow networks. Delight is never a tax." data-de="Wir achten Reduced-Motion und langsame Netze. Begeisterung kostet nichts extra.">We honour reduced-motion and slow networks. Delight is never a tax.</p></div></div>
+          <div class="step glass" data-reveal><span class="step__no">03</span><div><h3 class="step__title" data-en="Ship the system" data-de="Das System ausliefern">Ship the system</h3><p class="step__text" data-en="You leave with documented, reusable components — not a one-off." data-de="Sie erhalten dokumentierte, wiederverwendbare Komponenten — kein Einzelstück.">You leave with documented, reusable components — not a one-off.</p></div></div>
+        </div>
+        <div style="margin-top:var(--s-7)" data-reveal><span class="placeholder" data-en="The Lab — live experiments coming soon" data-de="Das Lab — Live-Experimente bald verfügbar">The Lab — live experiments coming soon</span></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div><div class="footer__brand-line">AETHER</div><p class="muted measure-sm" data-en="A creative studio for what comes next. Berlin & everywhere." data-de="Ein Kreativstudio für das, was kommt. Berlin & überall.">A creative studio for what comes next. Berlin & everywhere.</p></div>
+        <div class="footer__col"><h4 data-en="Studio" data-de="Studio">Studio</h4><ul>
+          <li><a href="overview.html" data-en="Overview" data-de="Überblick">Overview</a></li><li><a href="tech.html" data-en="Tech" data-de="Technik">Tech</a></li><li><a href="showcase.html" data-en="Showcase" data-de="Showcase">Showcase</a></li><li><a href="about.html" data-en="About" data-de="Über uns">About</a></li><li><a href="contact.html" data-en="Contact" data-de="Kontakt">Contact</a></li>
+        </ul></div>
+        <div class="footer__col"><h4 data-en="Connect" data-de="Kontakt">Connect</h4><ul><li><a href="#" data-cursor>Instagram</a></li><li><a href="#" data-cursor>Behance</a></li><li><a href="#" data-cursor>LinkedIn</a></li></ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> AETHER. <span data-en="All rights reserved." data-de="Alle Rechte vorbehalten.">All rights reserved.</span></span>
+        <span class="footer__credit">Typeface: <a href="https://velvetyne.fr/fonts/lineal/" target="_blank" rel="noopener">Lineal</a> · Velvetyne (OFL)</span>
+        <a class="to-top" href="#top"><span data-en="Back to top" data-de="Nach oben">Back to top</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

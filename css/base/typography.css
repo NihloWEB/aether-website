@@ -1,0 +1,67 @@
+/* ============================================================
+   typography.css — Lineal @font-face + global type styles
+   Lineal © Velvetyne Type Foundry — SIL Open Font License 1.1
+   (see assets/fonts/lineal/OFL.txt)
+   ============================================================ */
+
+/* ---- Static weights ---- */
+@font-face { font-family: "Lineal"; font-style: normal; font-display: swap; font-weight: 100;
+  src: url("../../assets/fonts/lineal/Lineal-Thin.woff2") format("woff2"),
+       url("../../assets/fonts/lineal/Lineal-Thin.woff") format("woff"); }
+@font-face { font-family: "Lineal"; font-style: normal; font-display: swap; font-weight: 300;
+  src: url("../../assets/fonts/lineal/Lineal-Light.woff2") format("woff2"),
+       url("../../assets/fonts/lineal/Lineal-Light.woff") format("woff"); }
+@font-face { font-family: "Lineal"; font-style: normal; font-display: swap; font-weight: 400;
+  src: url("../../assets/fonts/lineal/Lineal-Regular.woff2") format("woff2"),
+       url("../../assets/fonts/lineal/Lineal-Regular.woff") format("woff"); }
+@font-face { font-family: "Lineal"; font-style: normal; font-display: swap; font-weight: 500;
+  src: url("../../assets/fonts/lineal/Lineal-Medium.woff2") format("woff2"),
+       url("../../assets/fonts/lineal/Lineal-Medium.woff") format("woff"); }
+@font-face { font-family: "Lineal"; font-style: normal; font-display: swap; font-weight: 700;
+  src: url("../../assets/fonts/lineal/Lineal-Bold.woff2") format("woff2"),
+       url("../../assets/fonts/lineal/Lineal-Bold.woff") format("woff"); }
+@font-face { font-family: "Lineal"; font-style: normal; font-display: swap; font-weight: 800;
+  src: url("../../assets/fonts/lineal/Lineal-Heavy.woff2") format("woff2"),
+       url("../../assets/fonts/lineal/Lineal-Heavy.woff") format("woff"); }
+@font-face { font-family: "Lineal"; font-style: normal; font-display: swap; font-weight: 900;
+  src: url("../../assets/fonts/lineal/Lineal-Black.woff2") format("woff2"),
+       url("../../assets/fonts/lineal/Lineal-Black.woff") format("woff"); }
+
+/* ---- Variable font : drives "alive" weight animation on headlines ---- */
+@font-face { font-family: "Lineal VF"; font-style: normal; font-display: swap; font-weight: 100 900;
+  src: url("../../assets/fonts/lineal/LinealVF.woff2") format("woff2"),
+       url("../../assets/fonts/lineal/LinealVF.woff") format("woff"); }
+
+/* ---- Global type ---- */
+body {
+  font-family: var(--font-sans);
+  font-size: var(--t-body);
+  font-weight: 400;
+  color: var(--ink);
+  background: var(--bg-0);
+  letter-spacing: 0.005em;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+p { text-wrap: pretty; }
+strong { font-weight: 700; }
+small { font-size: var(--t-small); }
+
+.eyebrow {
+  display: inline-block;
+  font-size: var(--t-eyebrow);
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--ink-3);
+}
+
+.display { font-family: var(--font-display); line-height: 0.95; letter-spacing: -0.025em; }
+.lead { font-size: var(--t-h3); color: var(--ink-2); font-weight: 400; line-height: 1.45; }

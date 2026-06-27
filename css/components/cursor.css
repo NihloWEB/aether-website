@@ -1,0 +1,53 @@
+/* ============================================================
+   cursor.css — Custom luminous cursor (desktop / fine-pointer only)
+   Two parts: an instant dot and a lagging ring (set via JS transforms).
+   mix-blend-mode keeps it monochrome yet legible on any surface.
+   ============================================================ */
+
+.cursor {
+  position: fixed;
+  top: 0; left: 0;
+  z-index: var(--z-cursor);
+  pointer-events: none;
+  mix-blend-mode: difference;
+  opacity: 0;
+  transition: opacity var(--dur-2) var(--ease-out);
+}
+.cursor.is-active { opacity: 1; }
+
+.cursor__dot {
+  position: fixed;
+  top: 0; left: 0;
+  width: 7px; height: 7px;
+  margin: -3.5px 0 0 -3.5px;
+  border-radius: 50%;
+  background: #fff;
+  will-change: transform;
+}
+
+.cursor__ring {
+  position: fixed;
+  top: 0; left: 0;
+  width: 38px; height: 38px;
+  margin: -19px 0 0 -19px;
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  will-change: transform;
+  transition: width var(--dur-1) var(--ease-out),
+              height var(--dur-1) var(--ease-out),
+              margin var(--dur-1) var(--ease-out),
+              border-color var(--dur-1) var(--ease-out),
+              opacity var(--dur-1) var(--ease-out);
+}
+
+/* Grows over interactive targets (toggled by JS) */
+.cursor.is-hovering .cursor__ring {
+  width: 64px; height: 64px;
+  margin: -32px 0 0 -32px;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+.cursor.is-down .cursor__ring { width: 30px; height: 30px; margin: -15px 0 0 -15px; }
+
+/* Hide on touch / coarse pointers and when motion is reduced */
+@media (hover: none), (pointer: coarse) { .cursor { display: none; } }
+@media (prefers-reduced-motion: reduce) { .cursor { display: none; } }
