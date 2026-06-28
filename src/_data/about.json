@@ -57,19 +57,19 @@
       "de": "Das Team"
     },
     "title": {
-      "en": "Small. Senior. Obsessive.",
-      "de": "Klein. Erfahren. Besessen."
+      "en": "Small :)",
+      "de": "Klein :)"
     },
     "members": [
       {
-        "avatar": "A",
+        "avatar": "N",
         "name": {
-          "en": "Founder & ECD",
-          "de": "Gründer & ECD"
+          "en": "Founder",
+          "de": "Gründer"
         },
         "role": {
-          "en": "Name coming soon",
-          "de": "Name folgt"
+          "en": "Nick | Nihlo",
+          "de": "Nick | Nihlo"
         }
       },
       {
