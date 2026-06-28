@@ -35,8 +35,8 @@
   },
   "disciplinesHeading": {
     "eyebrow": {
-      "en": "What we do",
-      "de": "Was wir tun"
+      "en": "What do I do?",
+      "de": "Was ich mache?"
     },
     "title": {
       "en": "Four disciplines.",
@@ -46,12 +46,12 @@
   "disciplines": [
     {
       "title": {
-        "en": "Brand",
-        "de": "Marke"
+        "en": "WEB - Design",
+        "de": "WEB - Design"
       },
       "text": {
-        "en": "Identity systems, naming, voice and type.",
-        "de": "Identitätssysteme, Naming, Tonalität und Schrift."
+        "en": "Your website needs more than functionality.",
+        "de": "Deine Website verdient mehr als reine Funktionalität."
       }
     },
     {
