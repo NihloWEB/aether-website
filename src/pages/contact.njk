@@ -1,0 +1,70 @@
+---
+layout: base.njk
+title: Contact — AETHER
+description: Start a project with AETHER, or just say hello.
+---
+
+    <section class="page-hero container">
+      <div class="page-hero__light deco"></div>
+      <span class="eyebrow page-hero__eyebrow" data-reveal="fade" data-en="{{ contact.hero.eyebrow.en }}" data-de="{{ contact.hero.eyebrow.de }}">{{ contact.hero.eyebrow.en }}</span>
+      <h1 class="page-hero__title ink-shine" data-reveal data-en="{{ contact.hero.title.en }}" data-de="{{ contact.hero.title.de }}">{{ contact.hero.title.en }}</h1>
+      <p class="page-hero__lead" data-reveal data-en="{{ contact.hero.lead.en }}" data-de="{{ contact.hero.lead.de }}">{{ contact.hero.lead.en }}</p>
+    </section>
+
+    <section class="section--tight">
+      <div class="container grid-2" style="gap:var(--s-8); align-items:start">
+
+        <form class="glass glass--card stack-lg" style="gap:var(--s-5)" novalidate data-reveal="left" aria-label="Project enquiry">
+          <div class="grid-2" style="gap:var(--s-5)">
+            <div class="field">
+              <label for="c-name" data-en="{{ contact.form.nameLabel.en }}" data-de="{{ contact.form.nameLabel.de }}">{{ contact.form.nameLabel.en }}</label>
+              <input id="c-name" type="text" autocomplete="name" data-en-ph="{{ contact.form.namePlaceholder.en }}" data-de-ph="{{ contact.form.namePlaceholder.de }}" placeholder="{{ contact.form.namePlaceholder.en }}" />
+            </div>
+            <div class="field">
+              <label for="c-email" data-en="{{ contact.form.emailLabel.en }}" data-de="{{ contact.form.emailLabel.de }}">{{ contact.form.emailLabel.en }}</label>
+              <input id="c-email" type="email" autocomplete="email" data-en-ph="{{ contact.form.emailPlaceholder.en }}" data-de-ph="{{ contact.form.emailPlaceholder.de }}" placeholder="{{ contact.form.emailPlaceholder.en }}" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="c-type" data-en="{{ contact.form.typeLabel.en }}" data-de="{{ contact.form.typeLabel.de }}">{{ contact.form.typeLabel.en }}</label>
+            <select id="c-type">
+              {%- for o in contact.form.typeOptions %}
+              <option data-en="{{ o.en }}" data-de="{{ o.de }}">{{ o.en }}</option>
+              {%- endfor %}
+            </select>
+          </div>
+          <div class="field">
+            <label for="c-msg" data-en="{{ contact.form.messageLabel.en }}" data-de="{{ contact.form.messageLabel.de }}">{{ contact.form.messageLabel.en }}</label>
+            <textarea id="c-msg" data-en-ph="{{ contact.form.messagePlaceholder.en }}" data-de-ph="{{ contact.form.messagePlaceholder.de }}" placeholder="{{ contact.form.messagePlaceholder.en }}"></textarea>
+          </div>
+          <div style="display:flex; flex-wrap:wrap; gap:var(--s-4); align-items:center">
+            <button class="btn btn--solid btn--lg" type="button" data-magnetic="0.3">
+              <span data-en="{{ contact.form.submit.en }}" data-de="{{ contact.form.submit.de }}">{{ contact.form.submit.en }}</span>
+              <svg class="btn__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+            <span class="placeholder" data-en="{{ contact.form.note.en }}" data-de="{{ contact.form.note.de }}">{{ contact.form.note.en }}</span>
+          </div>
+        </form>
+
+        <div class="stack-lg" data-reveal="right">
+          <div class="glass glass--card stack">
+            <span class="eyebrow" data-en="{{ contact.info.emailHeading.en }}" data-de="{{ contact.info.emailHeading.de }}">{{ contact.info.emailHeading.en }}</span>
+            <a href="mailto:{{ site.email }}" class="display" style="font-size:var(--t-h2)" data-cursor>{{ site.email }}</a>
+          </div>
+          <div class="glass glass--card stack">
+            <span class="eyebrow" data-en="{{ contact.info.studioHeading.en }}" data-de="{{ contact.info.studioHeading.de }}">{{ contact.info.studioHeading.en }}</span>
+            <p class="muted">{{ contact.info.studioLocation }}<br /><span data-en="{{ contact.info.studioText.en }}" data-de="{{ contact.info.studioText.de }}">{{ contact.info.studioText.en }}</span></p>
+          </div>
+          <div class="glass glass--card stack">
+            <span class="eyebrow" data-en="{{ contact.info.availabilityHeading.en }}" data-de="{{ contact.info.availabilityHeading.de }}">{{ contact.info.availabilityHeading.en }}</span>
+            <p class="muted" data-en="{{ contact.info.availabilityText.en }}" data-de="{{ contact.info.availabilityText.de }}">{{ contact.info.availabilityText.en }}</p>
+            <div style="display:flex; gap:var(--s-2); margin-top:var(--s-2)">
+              {%- for s in contact.info.socials %}
+              <a href="{{ s.url }}" class="btn btn--glass btn--sm" data-cursor>{{ s.label }}</a>
+              {%- endfor %}
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>

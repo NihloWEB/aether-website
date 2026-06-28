@@ -1,0 +1,60 @@
+---
+layout: base.njk
+title: About — AETHER
+description: About AETHER — who we are, what we believe and how the studio came to be.
+---
+
+    <section class="page-hero container">
+      <div class="page-hero__light deco"></div>
+      <span class="eyebrow page-hero__eyebrow" data-reveal="fade" data-en="{{ about.hero.eyebrow.en }}" data-de="{{ about.hero.eyebrow.de }}">{{ about.hero.eyebrow.en }}</span>
+      <h1 class="page-hero__title ink-shine" data-reveal data-en="{{ about.hero.title.en }}" data-de="{{ about.hero.title.de }}">{{ about.hero.title.en }}</h1>
+      <p class="page-hero__lead" data-reveal data-en="{{ about.hero.lead.en }}" data-de="{{ about.hero.lead.de }}">{{ about.hero.lead.en }}</p>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="display" style="font-size:var(--t-d2); max-width:24ch" data-reveal data-en="{{ about.statement.en }}" data-de="{{ about.statement.de }}">{{ about.statement.en }}</h2>
+      </div>
+    </section>
+
+    <section class="section--tight">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow" data-en="{{ about.values.eyebrow.en }}" data-de="{{ about.values.eyebrow.de }}">{{ about.values.eyebrow.en }}</span>
+          <h2 class="section-head__title" data-en="{{ about.values.title.en }}" data-de="{{ about.values.title.de }}">{{ about.values.title.en }}</h2>
+        </div>
+        <div class="grid-3" data-reveal-group="100">
+          {%- for v in about.values.items %}
+          <article class="card" data-reveal><span class="card__num">{{ v.no }}</span><h3 class="card__title" data-en="{{ v.title.en }}" data-de="{{ v.title.de }}">{{ v.title.en }}</h3><p class="card__text" data-en="{{ v.text.en }}" data-de="{{ v.text.de }}">{{ v.text.en }}</p></article>
+          {%- endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section class="section--tight">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow" data-en="{{ about.team.eyebrow.en }}" data-de="{{ about.team.eyebrow.de }}">{{ about.team.eyebrow.en }}</span>
+          <h2 class="section-head__title" data-en="{{ about.team.title.en }}" data-de="{{ about.team.title.de }}">{{ about.team.title.en }}</h2>
+        </div>
+        <div class="grid-4" data-reveal-group="80">
+          {%- for m in about.team.members %}
+          <article class="member" data-reveal><span class="member__avatar">{{ m.avatar }}</span><span class="member__name" data-en="{{ m.name.en }}" data-de="{{ m.name.de }}">{{ m.name.en }}</span><span class="member__role" data-en="{{ m.role.en }}" data-de="{{ m.role.de }}">{{ m.role.en }}</span></article>
+          {%- endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow" data-en="{{ about.milestones.eyebrow.en }}" data-de="{{ about.milestones.eyebrow.de }}">{{ about.milestones.eyebrow.en }}</span>
+          <h2 class="section-head__title" data-en="{{ about.milestones.title.en }}" data-de="{{ about.milestones.title.de }}">{{ about.milestones.title.en }}</h2>
+        </div>
+        <div class="steps" data-reveal-group="100">
+          {%- for step in about.milestones.steps %}
+          <div class="step" data-reveal><span class="step__no">{{ step.no }}</span><div><h3 class="step__title" data-en="{{ step.title.en }}" data-de="{{ step.title.de }}">{{ step.title.en }}</h3><p class="step__text" data-en="{{ step.text.en }}" data-de="{{ step.text.de }}">{{ step.text.en }}</p></div></div>
+          {%- endfor %}
+        </div>
+      </div>
+    </section>

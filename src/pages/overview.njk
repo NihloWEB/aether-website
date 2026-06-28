@@ -1,0 +1,65 @@
+---
+layout: base.njk
+title: Overview — AETHER
+description: An overview of AETHER — an independent creative studio working across brand, motion, interface and spatial design.
+---
+
+    <section class="page-hero container">
+      <div class="page-hero__light deco"></div>
+      <span class="eyebrow page-hero__eyebrow" data-reveal="fade" data-en="{{ overview.hero.eyebrow.en }}" data-de="{{ overview.hero.eyebrow.de }}">{{ overview.hero.eyebrow.en }}</span>
+      <h1 class="page-hero__title ink-shine" data-reveal data-en="{{ overview.hero.title.en }}" data-de="{{ overview.hero.title.de }}">{{ overview.hero.title.en }}</h1>
+      <p class="page-hero__lead" data-reveal data-en="{{ overview.hero.lead.en }}" data-de="{{ overview.hero.lead.de }}">{{ overview.hero.lead.en }}</p>
+    </section>
+
+    <section class="section">
+      <div class="container grid-2" style="align-items:center; gap:var(--s-8)">
+        <h2 class="section-head__title" data-reveal="left" data-en="{{ overview.intro.heading.en }}" data-de="{{ overview.intro.heading.de }}">{{ overview.intro.heading.en }}</h2>
+        <div class="stack" data-reveal="right">
+          {%- for p in overview.intro.paragraphs %}
+          <p class="muted" data-en="{{ p.en }}" data-de="{{ p.de }}">{{ p.en }}</p>
+          {%- endfor %}
+          <span class="placeholder" data-en="{{ overview.intro.placeholder.en }}" data-de="{{ overview.intro.placeholder.de }}">{{ overview.intro.placeholder.en }}</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow" data-en="{{ overview.disciplinesHeading.eyebrow.en }}" data-de="{{ overview.disciplinesHeading.eyebrow.de }}">{{ overview.disciplinesHeading.eyebrow.en }}</span>
+          <h2 class="section-head__title" data-en="{{ overview.disciplinesHeading.title.en }}" data-de="{{ overview.disciplinesHeading.title.de }}">{{ overview.disciplinesHeading.title.en }}</h2>
+        </div>
+        {% set icons = [
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>',
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12c4-8 12-8 16 0M4 12c4 8 12 8 16 0"/></svg>',
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18"/></svg>',
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l9 5-9 5-9-5 9-5zM3 12l9 5 9-5M3 17l9 5 9-5"/></svg>'
+        ] %}
+        <div class="grid-4" data-reveal-group="100">
+          {%- for d in overview.disciplines %}
+          <article class="card" data-reveal><span class="card__icon">{{ icons[loop.index0] | safe }}</span><h3 class="card__title" data-en="{{ d.title.en }}" data-de="{{ d.title.de }}">{{ d.title.en }}</h3><p class="card__text" data-en="{{ d.text.en }}" data-de="{{ d.text.de }}">{{ d.text.en }}</p></article>
+          {%- endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container stats-grid" data-reveal-group="120">
+        {%- for s in home.stats %}
+        <div class="stat" data-reveal><span class="stat__num tnum"><span data-count="{{ s.value }}"{% if s.suffix %} data-suffix="{{ s.suffix }}"{% endif %}>0</span></span><span class="stat__label" data-en="{{ s.label.en }}" data-de="{{ s.label.de }}">{{ s.label.en }}</span></div>
+        {%- endfor %}
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-band__inner glass glass--strong" data-tilt="3" data-reveal="scale">
+          <div class="cta-band__glow deco"></div>
+          <h2 class="cta-band__title" data-en="{{ overview.cta.title.en }}" data-de="{{ overview.cta.title.de }}">{{ overview.cta.title.en }}</h2>
+          <p class="cta-band__sub" data-en="{{ overview.cta.sub.en }}" data-de="{{ overview.cta.sub.de }}">{{ overview.cta.sub.en }}</p>
+          <div class="cta-band__actions">
+            <a class="btn btn--solid btn--lg" href="{{ overview.cta.primary.url }}" data-magnetic="0.4"><span data-en="{{ overview.cta.primary.en }}" data-de="{{ overview.cta.primary.de }}">{{ overview.cta.primary.en }}</span><svg class="btn__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>

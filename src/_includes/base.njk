@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}" />
+  <meta name="theme-color" content="#050507" />
+  <meta name="color-scheme" content="dark" />
+
+  <!-- Prevent reveal flash before JS, and signal no-JS fallback -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/lineal/LinealVF.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/lineal/Lineal-Regular.woff2" crossorigin />
+  <link rel="stylesheet" href="/css/main.css" />
+  <script type="module" src="/js/main.js"></script>
+</head>
+<body id="top">
+
+  <!-- Ambient living background -->
+  <div class="bg-field deco" aria-hidden="true">
+    <div class="bg-field__orb bg-field__orb--a"></div>
+    <div class="bg-field__orb bg-field__orb--b"></div>
+    <div class="bg-field__orb bg-field__orb--c"></div>
+    <div class="bg-field__grain"></div>
+    <div class="bg-field__vignette"></div>
+  </div>
+
+  <a class="visually-hidden" href="#main">Skip to content</a>
+
+  <!-- Navigation -->
+  <header class="nav" data-nav>
+    <div class="nav__inner glass glass--bar">
+      <a class="nav__brand" href="/" aria-label="{{ site.brand }} — home"><span class="mark deco"></span>{{ site.brand }}</a>
+      <nav class="nav__links" aria-label="Primary">
+        {%- for item in site.nav %}
+        <a class="nav__link" href="{{ item.url }}" data-en="{{ item.label.en }}" data-de="{{ item.label.de }}">{{ item.label.en }}</a>
+        {%- endfor %}
+      </nav>
+      <div class="nav__controls">
+        <div class="lang-toggle" role="group" aria-label="Language / Sprache">
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="de">DE</button>
+        </div>
+        <a class="btn btn--solid btn--sm" href="{{ site.contactNav.url }}" data-magnetic="0.3" data-en="{{ site.contactNav.en }}" data-de="{{ site.contactNav.de }}">{{ site.contactNav.en }}</a>
+        <button class="icon-btn nav__burger" data-burger aria-expanded="false" data-en-aria="Open menu" data-de-aria="Menü öffnen" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Full-screen menu -->
+  <div class="nav-menu" data-menu>
+    <nav class="nav-menu__list" aria-label="All pages">
+      {%- for item in site.nav %}
+      <span class="nav-menu__item"><a class="nav-menu__link" href="{{ item.url }}"><span class="idx">0{{ loop.index }}</span><span data-en="{{ item.label.en }}" data-de="{{ item.label.de }}">{{ item.label.en }}</span></a></span>
+      {%- endfor %}
+      <span class="nav-menu__item"><a class="nav-menu__link" href="{{ site.contactNav.url }}"><span class="idx">0{{ site.nav.length + 1 }}</span><span data-en="{{ site.contactNav.en }}" data-de="{{ site.contactNav.de }}">{{ site.contactNav.en }}</span></a></span>
+    </nav>
+    <div class="nav-menu__meta">
+      <span>{{ site.location }}</span>
+      <span>{{ site.email }}</span>
+      <span data-en="{{ site.availability.en }}" data-de="{{ site.availability.de }}">{{ site.availability.en }}</span>
+    </div>
+  </div>
+
+  <main id="main">
+{{ content | safe }}
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <div class="footer__brand-line">{{ site.brand }}</div>
+          <p class="muted measure-sm" data-en="{{ site.footer.tagline.en }}" data-de="{{ site.footer.tagline.de }}">{{ site.footer.tagline.en }}</p>
+        </div>
+        <div class="footer__col">
+          <h4 data-en="{{ site.footer.studioHeading.en }}" data-de="{{ site.footer.studioHeading.de }}">{{ site.footer.studioHeading.en }}</h4>
+          <ul>
+            {%- for item in site.nav %}
+            <li><a href="{{ item.url }}" data-en="{{ item.label.en }}" data-de="{{ item.label.de }}">{{ item.label.en }}</a></li>
+            {%- endfor %}
+            <li><a href="{{ site.contactNav.url }}" data-en="{{ site.contactNav.en }}" data-de="{{ site.contactNav.de }}">{{ site.contactNav.en }}</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 data-en="{{ site.footer.connectHeading.en }}" data-de="{{ site.footer.connectHeading.de }}">{{ site.footer.connectHeading.en }}</h4>
+          <ul>
+            {%- for c in site.footer.connect %}
+            <li><a href="{{ c.url }}" data-cursor>{{ c.label }}</a></li>
+            {%- endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> {{ site.brand }}. <span data-en="{{ site.footer.rights.en }}" data-de="{{ site.footer.rights.de }}">{{ site.footer.rights.en }}</span></span>
+        <span class="footer__credit">Typeface: <a href="https://velvetyne.fr/fonts/lineal/" target="_blank" rel="noopener noreferrer">Lineal</a> · Velvetyne (OFL)</span>
+        <a class="to-top" href="#top"><span data-en="Back to top" data-de="Nach oben">Back to top</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

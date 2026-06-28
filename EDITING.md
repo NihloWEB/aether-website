@@ -1,184 +1,98 @@
-# AETHER — Bearbeitungs- & Veröffentlichungs-Anleitung
+# AETHER — Inhalte bearbeiten & veröffentlichen
 
-Diese Seite ist **reines HTML/CSS/JS** — kein Build, keine Abhängigkeiten.
-Du kannst alles in einem normalen Text-Editor (z. B. VS Code) ändern. Unten steht,
-**wo** du was änderst, und wie du es **auf Vercel** veröffentlichst.
+Die Seite wird mit **Eleventy (11ty)** gebaut: **Inhalte** liegen getrennt vom
+Design in **`src/_data/*.json`** (zweisprachig EN/DE), die **Templates** in `src/`.
+Beim `git push` baut **Vercel** automatisch (`npx @11ty/eleventy` → `_site/`).
 
----
-
-## 1. Lokal ansehen
-
-- **`start.command`** doppelklicken → öffnet die Seite unter <http://localhost:4321>.
-- Oder im Terminal: `python3 -m http.server 4321` (im Projektordner).
-
-> Wichtig: nicht die HTML-Datei direkt per Doppelklick öffnen — wegen ES-Modulen
-> und lokalen Schriften wird ein kleiner Server gebraucht (genau dafür ist
-> `start.command` da).
+Es gibt **zwei Wege** zu bearbeiten — wähle, was dir passt.
 
 ---
 
-## 2. Texte ändern (das Wichtigste)
+## Weg 1 — Pages CMS (Web-Oberfläche, empfohlen)
 
-Alle sichtbaren Texte stehen **direkt im HTML** und sind **zweisprachig**.
-Jedes Element hat zwei Attribute: `data-en` (Englisch) und `data-de` (Deutsch).
+Bearbeiten im Browser, ohne Code, mit beschrifteten Feldern.
 
-```html
-<h3 data-en="Brand systems" data-de="Markensysteme">Brand systems</h3>
-```
+**Einmalig einrichten:**
+1. Gehe auf **<https://app.pagescms.org>** → **Sign in with GitHub**.
+2. Pages CMS für das Repo **`NihloWEB/aether-website`** autorisieren.
+3. Das Projekt erscheint mit allen Inhaltsgruppen (Global, Home, Overview, Tech,
+   Showcase, About, Contact) — die Struktur kommt aus **`.pages.yml`**.
 
-So änderst du einen Text:
-1. Öffne die passende Datei (siehe Tabelle unten).
-2. Ändere **beide** Attribute `data-en="…"` und `data-de="…"`.
-3. Den sichtbaren Text dazwischen (`Brand systems`) kannst du gleich mit anpassen
-   — er wird beim Laden ohnehin durch die gewählte Sprache ersetzt.
-
-| Seite | Datei |
-|------|------|
-| Startseite | `index.html` |
-| Überblick | `pages/overview.html` |
-| Technik | `pages/tech.html` |
-| Showcase | `pages/showcase.html` |
-| Über uns | `pages/about.html` |
-| Kontakt | `pages/contact.html` |
-
-**Platzhalter (Felder, Aria-Labels):** `data-en-ph` / `data-de-ph` (Platzhalter
-in Eingabefeldern) und `data-en-aria` / `data-de-aria` (Vorlese-Beschriftung).
+**Bearbeiten:**
+- Gruppe öffnen → Felder ändern (jeder Text hat **EN** und **DE**).
+- **Save** → Pages CMS committet nach GitHub → Vercel deployt automatisch (~30 s).
 
 ---
 
-## 3. Sprache
+## Weg 2 — Direkt in den Dateien (für Entwickler)
 
-- Der EN/DE-Umschalter oben rechts merkt sich die Wahl (im Browser gespeichert).
-- Standard = Sprache des Browsers. Mehr Logik in `js/core/i18n.js` (musst du normal
-  nicht anfassen).
-
----
-
-## 4. Markenname „AETHER“ ändern
-
-Suchen-und-Ersetzen über alle Dateien nach `AETHER`. Es kommt vor in:
-- der Navigation (`.nav__brand`) auf jeder Seite,
-- der Fußzeile (`.footer__brand-line`),
-- dem `<title>` jeder Seite,
-- dem Hero/Manifest-Text auf `index.html`.
-
----
-
-## 5. Farben & Look ändern
-
-Alle Design-Werte stehen zentral in **`css/base/tokens.css`**. Beispiele:
-
-```css
---bg-0: #050507;   /* Hintergrund (fast schwarz) */
---ink:  #f5f6f8;   /* Textfarbe (fast weiß)      */
---glow: rgba(184, 206, 255, 0.55); /* dezenter Leucht-/Glanz-Ton */
-```
-
-Ändere nur diese Tokens — der Rest der Seite passt sich automatisch an.
-Für ein helles Theme `--bg-0` heller und `--ink` dunkler setzen.
-
----
-
-## 6. Projekte im Showcase ändern / hinzufügen
-
-Ein Projekt-Kachel-Block sieht so aus (in `pages/showcase.html`, Raster-Variante):
-
-```html
-<article class="tile tile--grid" data-reveal>
-  <div class="tile__media deco" style="--tile-angle:35deg"></div>
-  <div class="tile__overlay deco"></div>
-  <span class="tile__tag" data-en="Brand" data-de="Marke">Brand</span>
-  <h3 class="tile__title">Helix</h3>
-  <p class="tile__meta" data-en="Identity system · 2025" data-de="Identitätssystem · 2025">…</p>
-</article>
-```
-
-- Kopiere den Block für ein neues Projekt.
-- `--tile-angle` ändert das (aktuell rein per CSS erzeugte) Muster.
-- Auf der Startseite gibt es die gleiche Kachel in der horizontalen Leiste
-  (`index.html`, `.showcase__track`).
-
----
-
-## 7. Eigene Bilder einsetzen
-
-Aktuell ist die Bildfläche ein **CSS-Platzhalter** (deshalb 0 Bilddateien).
-Echte Bilder so einbauen:
-1. Lege die Datei in `assets/img/` (z. B. `assets/img/helix.jpg`).
-2. Ersetze in der Kachel das `<div class="tile__media …">` durch ein Bild, z. B.:
-   ```html
-   <img class="tile__media" src="assets/img/helix.jpg" alt="Helix" />
+1. Inhalte liegen in **`src/_data/`** als JSON. Lokal bearbeiten:
+   ```bash
+   # einmalig
+   npm install
+   # Dev-Server mit Live-Reload (oder start.command doppelklicken)
+   npm run dev        # → http://localhost:8080
    ```
-   (auf Unterseiten: `../assets/img/helix.jpg`).
+2. Datei ändern, speichern → Browser lädt neu.
+3. Veröffentlichen:
+   ```bash
+   git add -A && git commit -m "Inhalte aktualisiert" && git push
+   ```
 
 ---
 
-## 8. Neue Unterseite hinzufügen
+## Wo liegt welcher Inhalt?
 
-1. Kopiere eine Datei aus `pages/` (z. B. `about.html`) und benenne sie um.
-2. Inhalt im `<main>` anpassen (Kopf/Navigation/Fußzeile gleich lassen).
-3. Den Link in **jeder** Seite ergänzen — in `.nav__links` **und** in `.nav-menu__list`
-   (die Navigation ist auf jeder Seite eingebaut; es gibt keine Vorlagen-Technik).
-   Der aktive Link wird automatisch erkannt.
+| Datei | Inhalt |
+|------|--------|
+| `src/_data/site.json` | Markenname, Navigation, Kontakt-Link, Footer (global) |
+| `src/_data/home.json` | Startseite: Hero, Manifest, Capabilities, Showcase-Leiste, Stats, Prozess, CTA |
+| `src/_data/overview.json` | Seite **Überblick** |
+| `src/_data/tech.json` | Seite **Technik** |
+| `src/_data/showcase.json` | Seite **Showcase** (Projekte) |
+| `src/_data/about.json` | Seite **Über uns** (Werte, Team, Meilensteine) |
+| `src/_data/contact.json` | Seite **Kontakt** (Formular-Labels, Infos) |
 
----
-
-## 9. Auf Vercel veröffentlichen
-
-Die Datei `vercel.json` ist schon vorbereitet (saubere URLs ohne `.html`, Caching).
-**Kein Build nötig** — Vercel hostet die Dateien direkt.
-
-**Empfohlen (einmal einrichten, danach Änderungen automatisch live):**
-1. Lade den Projektordner zu **GitHub** hoch (neues Repository).
-2. Auf <https://vercel.com> → **Add New… → Project** → das GitHub-Repo importieren.
-3. Framework Preset: **Other** (alles andere leer lassen) → **Deploy**.
-4. Ab jetzt: Datei auf GitHub ändern → Vercel veröffentlicht automatisch neu.
-
-**Alternative (per Terminal, ohne GitHub):**
-```bash
-npm i -g vercel     # einmalig
-cd <projektordner>
-vercel              # folgen — fertig
-vercel --prod       # für die Live-Version
+**Zweisprachig:** Jeder Text ist ein Objekt mit `en` und `de`, z. B.
+```json
+"title": { "en": "Selected worlds.", "de": "Ausgewählte Welten." }
 ```
 
-> Tipp: „Bearbeiten“ passiert immer in den Dateien (lokal oder direkt auf GitHub).
-> Vercel ist das Hosting/Deployment — verbunden mit GitHub wird jede Textänderung
-> nach dem Speichern automatisch online gestellt.
+---
+
+## Häufige Aufgaben
+
+**Projekt hinzufügen** → in `showcase.json` einen Eintrag in `tiles` kopieren
+(`angle` = Musterwinkel, `title`, `tag`, `meta`). Für die Startseiten-Leiste
+ebenso in `home.json` → `showcase.tiles`. *(In Pages CMS: „+" in der Liste.)*
+
+**Texte/Übersetzungen** → jeweiliges `en`/`de`-Feld ändern.
+
+**Navigation/Markenname** → `site.json` (`nav`, `brand`, `footer`).
+
+**Echte Bilder** → Dateien nach `assets/img/` legen; im Template die
+`tile__media`-Fläche durch ein `<img>` ersetzen (Design bleibt CSS-basiert, bis
+echte Bilder da sind).
+
+**Design/Farben** → unverändert in `css/base/tokens.css` (Tokens). Templates in
+`src/`, gemeinsames Layout in `src/_includes/base.njk`.
 
 ---
 
-## 10. Sicherheit (CSP) — beim Einbinden externer Inhalte beachten
+## Neue Unterseite (Entwickler)
 
-Auf Vercel sendet die Seite strenge Security-Header (in **`vercel.json`**), u. a. eine
-**Content-Security-Policy (CSP)**. Die CSP erlaubt standardmäßig **nur Inhalte von der
-eigenen Domain** — gut für die Sicherheit, aber:
-
-> Wenn du etwas **Externes** einbaust (Google Fonts, ein YouTube-/Vimeo-Video,
-> Analytics, ein Skript von einem CDN, Bilder von einer fremden Domain), wird es
-> **blockiert**, bis du die Quelle in der CSP freigibst.
-
-Quelle freigeben = in `vercel.json` die passende Direktive in der `Content-Security-Policy`
-erweitern, z. B.:
-- externe **Bilder**: `img-src 'self' data: https://bilder.example.com`
-- **YouTube-Embed**: `frame-src https://www.youtube-nocookie.com` ergänzen
-- **Google Fonts**: `style-src … https://fonts.googleapis.com` **und** `font-src 'self' https://fonts.gstatic.com`
-- externes **Skript**: `script-src 'self' 'sha256-…' https://cdn.example.com`
-
-**Wenn du das kleine Inline-Script im `<head>` änderst**
-(`document.documentElement.classList.add('js')`), stimmt der Hash in der CSP nicht mehr →
-neuen berechnen und als `'sha256-…'` in `script-src` eintragen:
-```bash
-printf "%s" "DEIN-SCRIPT-INHALT" | openssl dgst -sha256 -binary | openssl base64
-```
-(Einfacher: solche Logik in eine `.js`-Datei auslagern statt inline.)
-
-> Tipp: Nach dem Deploy die Header auf <https://securityheaders.com> prüfen — sollte „A“ geben.
+1. `src/pages/<name>.njk` anlegen (Front-Matter `layout: base.njk` + Inhalt).
+2. `src/_data/<name>.json` mit den Texten anlegen.
+3. In `site.json` → `nav` einen Eintrag mit `url: "/pages/<name>/"` ergänzen.
+4. Optional in `.pages.yml` eine Gruppe ergänzen, damit es im CMS editierbar ist.
 
 ---
 
-## 11. Schrift & Lizenz
+## Sicherheit (CSP) — beim Einbinden externer Inhalte
 
-Schrift **Lineal** (Velvetyne, SIL Open Font License) liegt unter
-`assets/fonts/lineal/` inkl. Lizenz (`OFL.txt`) und ist in der Fußzeile genannt.
-Die technische Doku zum gesamten Aufbau steht in `CLAUDE.md`.
+Auf Vercel sendet die Seite eine strenge **Content-Security-Policy** (in
+`vercel.json`). Externe Quellen (YouTube, Google Fonts, Analytics, fremde Bilder)
+werden geblockt, bis du sie dort freigibst. Details + Beispiele stehen weiterhin in
+`vercel.json`; nach dem Deploy auf <https://securityheaders.com> prüfbar.
+
+> Architektur & Technik im Detail: siehe `CLAUDE.md`.

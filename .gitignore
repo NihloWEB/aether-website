@@ -7,3 +7,7 @@
 # Logs / misc
 *.log
 node_modules/
+
+# Eleventy build output (Vercel builds this; not committed)
+_site/
+.cache/

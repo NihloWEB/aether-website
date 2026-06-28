@@ -1,0 +1,14 @@
+{
+  "name": "aether-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AETHER — creative studio website (Eleventy SSG + Git CMS)",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "clean": "rm -rf _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

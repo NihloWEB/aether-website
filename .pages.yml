@@ -1,0 +1,412 @@
+# ============================================================
+#  Pages CMS configuration  ·  https://pagescms.org
+#  Edit content at https://app.pagescms.org → sign in with
+#  GitHub → open "NihloWEB/aether-website". Every entry below
+#  maps to a JSON file in src/_data/. Saving commits to GitHub,
+#  which triggers a Vercel build & deploy.
+#  Bilingual fields are objects with `en` (English) + `de` (Deutsch).
+# ============================================================
+
+media:
+  input: assets/img
+  output: /assets/img
+
+content:
+  # ---------------------------------------------------------- GLOBAL
+  - name: site
+    label: "Global · Brand / Nav / Footer"
+    type: file
+    path: src/_data/site.json
+    format: json
+    fields:
+      - { name: brand, label: Brand name, type: string }
+      - { name: email, label: Email, type: string }
+      - { name: location, label: Location, type: string }
+      - name: availability
+        label: Availability badge
+        type: object
+        fields: &bi
+          - { name: en, label: English, type: string }
+          - { name: de, label: Deutsch, type: string }
+      - name: nav
+        label: Top navigation
+        type: object
+        list: true
+        fields:
+          - { name: url, label: URL, type: string }
+          - { name: label, label: Label, type: object, fields: *bi }
+      - name: contactNav
+        label: Contact link
+        type: object
+        fields:
+          - { name: url, label: URL, type: string }
+          - { name: en, label: English, type: string }
+          - { name: de, label: Deutsch, type: string }
+      - name: footer
+        label: Footer
+        type: object
+        fields:
+          - name: tagline
+            label: Tagline
+            type: object
+            fields: &bil
+              - { name: en, label: English, type: text }
+              - { name: de, label: Deutsch, type: text }
+          - { name: studioHeading, label: Studio heading, type: object, fields: *bi }
+          - { name: connectHeading, label: Connect heading, type: object, fields: *bi }
+          - name: connect
+            label: Social links
+            type: object
+            list: true
+            fields:
+              - { name: label, label: Label, type: string }
+              - { name: url, label: URL, type: string }
+          - { name: rights, label: Rights text, type: object, fields: *bi }
+
+  # ---------------------------------------------------------- HOME
+  - name: home
+    label: "Home page"
+    type: file
+    path: src/_data/home.json
+    format: json
+    fields:
+      - name: hero
+        label: Hero
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: object, fields: *bi }
+          - { name: line1, label: Headline line 1, type: object, fields: *bi }
+          - { name: line2, label: Headline line 2, type: object, fields: *bi }
+          - { name: line3, label: "Headline line 3 (outlined)", type: object, fields: *bi }
+          - { name: lead, label: Lead paragraph, type: object, fields: *bil }
+          - name: ctaPrimary
+            label: Primary button
+            type: object
+            fields:
+              - { name: en, label: English, type: string }
+              - { name: de, label: Deutsch, type: string }
+              - { name: url, label: URL, type: string }
+          - name: ctaSecondary
+            label: Secondary button
+            type: object
+            fields:
+              - { name: en, label: English, type: string }
+              - { name: de, label: Deutsch, type: string }
+              - { name: url, label: URL, type: string }
+          - { name: chips, label: Floating chips, type: object, list: true, fields: *bi }
+          - { name: scroll, label: Scroll cue, type: object, fields: *bi }
+      - { name: marquee, label: Marquee words, type: string, list: true }
+      - name: manifesto
+        label: Manifesto
+        type: object
+        fields:
+          - { name: en, label: English sentence, type: text }
+          - { name: de, label: Deutsch sentence, type: text }
+          - { name: sig, label: Signature, type: object, fields: *bi }
+      - name: capabilities
+        label: Capabilities (selector)
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: object, fields: *bi }
+          - { name: title, label: Title, type: object, fields: *bi }
+          - name: disciplines
+            label: Disciplines
+            type: object
+            list: true
+            fields:
+              - { name: tab, label: Tab label, type: object, fields: *bi }
+              - { name: glyph, label: Glyph letter, type: string }
+              - { name: title, label: Title, type: object, fields: *bi }
+              - { name: text, label: Text, type: object, fields: *bil }
+              - { name: chips, label: Chips, type: object, list: true, fields: *bi }
+      - name: showcase
+        label: Showcase rail
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: object, fields: *bi }
+          - { name: title, label: Title, type: object, fields: *bi }
+          - name: tiles
+            label: Project tiles
+            type: object
+            list: true
+            fields:
+              - { name: angle, label: Pattern angle, type: number }
+              - { name: title, label: Project name, type: string }
+              - { name: tag, label: Tag, type: object, fields: *bi }
+              - { name: meta, label: Meta, type: object, fields: *bi }
+      - name: stats
+        label: Stats
+        type: object
+        list: true
+        fields:
+          - { name: value, label: Number, type: number }
+          - { name: suffix, label: Suffix, type: string }
+          - { name: label, label: Label, type: object, fields: *bi }
+      - name: process
+        label: Process
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: object, fields: *bi }
+          - { name: title, label: Title, type: object, fields: *bi }
+          - name: steps
+            label: Steps
+            type: object
+            list: true
+            fields:
+              - { name: no, label: "Number", type: string }
+              - { name: title, label: Title, type: object, fields: *bi }
+              - { name: text, label: Text, type: object, fields: *bil }
+      - name: cta
+        label: Closing CTA
+        type: object
+        fields:
+          - { name: title, label: Title, type: object, fields: *bi }
+          - { name: sub, label: Subtitle, type: object, fields: *bil }
+          - name: primary
+            label: Primary button
+            type: object
+            fields:
+              - { name: en, label: English, type: string }
+              - { name: de, label: Deutsch, type: string }
+              - { name: url, label: URL, type: string }
+          - name: secondary
+            label: Secondary button
+            type: object
+            fields:
+              - { name: en, label: English, type: string }
+              - { name: de, label: Deutsch, type: string }
+              - { name: url, label: URL, type: string }
+
+  # ---------------------------------------------------------- OVERVIEW
+  - name: overview
+    label: "Page · Overview"
+    type: file
+    path: src/_data/overview.json
+    format: json
+    fields:
+      - name: hero
+        label: Hero
+        type: object
+        fields:
+          - { name: eyebrow, type: object, fields: *bi, label: Eyebrow }
+          - { name: title, type: object, fields: *bi, label: Title }
+          - { name: lead, type: object, fields: *bil, label: Lead }
+      - name: intro
+        label: Intro
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: object, fields: *bi }
+          - { name: paragraphs, label: Paragraphs, type: object, list: true, fields: *bil }
+          - { name: placeholder, label: Placeholder note, type: object, fields: *bi }
+      - name: disciplinesHeading
+        label: Disciplines heading
+        type: object
+        fields:
+          - { name: eyebrow, type: object, fields: *bi, label: Eyebrow }
+          - { name: title, type: object, fields: *bi, label: Title }
+      - name: disciplines
+        label: Disciplines
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: object, fields: *bi }
+          - { name: text, label: Text, type: object, fields: *bi }
+      - name: cta
+        label: CTA
+        type: object
+        fields:
+          - { name: title, type: object, fields: *bi, label: Title }
+          - { name: sub, type: object, fields: *bil, label: Subtitle }
+          - name: primary
+            label: Button
+            type: object
+            fields:
+              - { name: en, label: English, type: string }
+              - { name: de, label: Deutsch, type: string }
+              - { name: url, label: URL, type: string }
+
+  # ---------------------------------------------------------- TECH
+  - name: tech
+    label: "Page · Tech"
+    type: file
+    path: src/_data/tech.json
+    format: json
+    fields:
+      - name: hero
+        label: Hero
+        type: object
+        fields:
+          - { name: eyebrow, type: object, fields: *bi, label: Eyebrow }
+          - { name: title, type: object, fields: *bi, label: Title }
+          - { name: lead, type: object, fields: *bil, label: Lead }
+      - name: stack
+        label: Stack
+        type: object
+        fields:
+          - { name: eyebrow, type: object, fields: *bi, label: Eyebrow }
+          - { name: title, type: object, fields: *bi, label: Title }
+          - name: cards
+            label: Cards
+            type: object
+            list: true
+            fields:
+              - { name: title, label: Title, type: object, fields: *bi }
+              - { name: text, label: Text, type: object, fields: *bil }
+      - name: principles
+        label: Principles
+        type: object
+        fields:
+          - { name: eyebrow, type: object, fields: *bi, label: Eyebrow }
+          - { name: title, type: object, fields: *bi, label: Title }
+          - name: steps
+            label: Steps
+            type: object
+            list: true
+            fields:
+              - { name: no, label: Number, type: string }
+              - { name: title, label: Title, type: object, fields: *bi }
+              - { name: text, label: Text, type: object, fields: *bil }
+      - { name: lab, label: Lab placeholder, type: object, fields: *bi }
+
+  # ---------------------------------------------------------- SHOWCASE
+  - name: showcase
+    label: "Page · Showcase"
+    type: file
+    path: src/_data/showcase.json
+    format: json
+    fields:
+      - name: hero
+        label: Hero
+        type: object
+        fields:
+          - { name: eyebrow, type: object, fields: *bi, label: Eyebrow }
+          - { name: title, type: object, fields: *bi, label: Title }
+          - { name: lead, type: object, fields: *bil, label: Lead }
+      - { name: filters, label: Filter chips, type: object, list: true, fields: *bi }
+      - { name: filterNote, label: Filter note, type: object, fields: *bi }
+      - name: tiles
+        label: Projects
+        type: object
+        list: true
+        fields:
+          - { name: angle, label: Pattern angle, type: number }
+          - { name: title, label: Project name, type: string }
+          - { name: tag, label: Tag, type: object, fields: *bi }
+          - { name: meta, label: Meta, type: object, fields: *bi }
+      - name: cta
+        label: CTA
+        type: object
+        fields:
+          - { name: title, type: object, fields: *bi, label: Title }
+          - { name: sub, type: object, fields: *bil, label: Subtitle }
+          - name: primary
+            label: Button
+            type: object
+            fields:
+              - { name: en, label: English, type: string }
+              - { name: de, label: Deutsch, type: string }
+              - { name: url, label: URL, type: string }
+
+  # ---------------------------------------------------------- ABOUT
+  - name: about
+    label: "Page · About"
+    type: file
+    path: src/_data/about.json
+    format: json
+    fields:
+      - name: hero
+        label: Hero
+        type: object
+        fields:
+          - { name: eyebrow, type: object, fields: *bi, label: Eyebrow }
+          - { name: title, type: object, fields: *bi, label: Title }
+          - { name: lead, type: object, fields: *bil, label: Lead }
+      - { name: statement, label: Statement, type: object, fields: *bil }
+      - name: values
+        label: Values
+        type: object
+        fields:
+          - { name: eyebrow, type: object, fields: *bi, label: Eyebrow }
+          - { name: title, type: object, fields: *bi, label: Title }
+          - name: items
+            label: Values
+            type: object
+            list: true
+            fields:
+              - { name: no, label: Number, type: string }
+              - { name: title, label: Title, type: object, fields: *bi }
+              - { name: text, label: Text, type: object, fields: *bil }
+      - name: team
+        label: Team
+        type: object
+        fields:
+          - { name: eyebrow, type: object, fields: *bi, label: Eyebrow }
+          - { name: title, type: object, fields: *bi, label: Title }
+          - name: members
+            label: Members
+            type: object
+            list: true
+            fields:
+              - { name: avatar, label: Avatar letter, type: string }
+              - { name: name, label: Name / role, type: object, fields: *bi }
+              - { name: role, label: Sub-label, type: object, fields: *bi }
+      - name: milestones
+        label: Milestones
+        type: object
+        fields:
+          - { name: eyebrow, type: object, fields: *bi, label: Eyebrow }
+          - { name: title, type: object, fields: *bi, label: Title }
+          - name: steps
+            label: Steps
+            type: object
+            list: true
+            fields:
+              - { name: no, label: Year, type: string }
+              - { name: title, label: Title, type: object, fields: *bi }
+              - { name: text, label: Text, type: object, fields: *bil }
+
+  # ---------------------------------------------------------- CONTACT
+  - name: contact
+    label: "Page · Contact"
+    type: file
+    path: src/_data/contact.json
+    format: json
+    fields:
+      - name: hero
+        label: Hero
+        type: object
+        fields:
+          - { name: eyebrow, type: object, fields: *bi, label: Eyebrow }
+          - { name: title, type: object, fields: *bi, label: Title }
+          - { name: lead, type: object, fields: *bil, label: Lead }
+      - name: form
+        label: Form labels
+        type: object
+        fields:
+          - { name: nameLabel, label: Name label, type: object, fields: *bi }
+          - { name: namePlaceholder, label: Name placeholder, type: object, fields: *bi }
+          - { name: emailLabel, label: Email label, type: object, fields: *bi }
+          - { name: emailPlaceholder, label: Email placeholder, type: object, fields: *bi }
+          - { name: typeLabel, label: Type label, type: object, fields: *bi }
+          - { name: typeOptions, label: Type options, type: object, list: true, fields: *bi }
+          - { name: messageLabel, label: Message label, type: object, fields: *bi }
+          - { name: messagePlaceholder, label: Message placeholder, type: object, fields: *bi }
+          - { name: submit, label: Submit button, type: object, fields: *bi }
+          - { name: note, label: Note, type: object, fields: *bi }
+      - name: info
+        label: Contact info
+        type: object
+        fields:
+          - { name: emailHeading, label: Email heading, type: object, fields: *bi }
+          - { name: studioHeading, label: Studio heading, type: object, fields: *bi }
+          - { name: studioLocation, label: Studio location, type: string }
+          - { name: studioText, label: Studio text, type: object, fields: *bi }
+          - { name: availabilityHeading, label: Availability heading, type: object, fields: *bi }
+          - { name: availabilityText, label: Availability text, type: object, fields: *bi }
+          - name: socials
+            label: Social buttons
+            type: object
+            list: true
+            fields:
+              - { name: label, label: Label, type: string }
+              - { name: url, label: URL, type: string }

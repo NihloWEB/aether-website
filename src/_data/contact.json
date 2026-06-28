@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "eyebrow": { "en": "Contact", "de": "Kontakt" },
+    "title": { "en": "Let's talk.", "de": "Sprechen wir." },
+    "lead": { "en": "Tell us where you're headed. We reply to every serious enquiry within two working days.", "de": "Erzählen Sie uns, wohin die Reise geht. Wir antworten auf jede ernsthafte Anfrage innerhalb von zwei Werktagen." }
+  },
+  "form": {
+    "nameLabel": { "en": "Name", "de": "Name" },
+    "namePlaceholder": { "en": "Jane Doe", "de": "Max Mustermann" },
+    "emailLabel": { "en": "Email", "de": "E-Mail" },
+    "emailPlaceholder": { "en": "you@company.com", "de": "du@firma.de" },
+    "typeLabel": { "en": "Project type", "de": "Projektart" },
+    "typeOptions": [
+      { "en": "Brand identity", "de": "Markenidentität" },
+      { "en": "Motion / film", "de": "Motion / Film" },
+      { "en": "Interface / product", "de": "Interface / Produkt" },
+      { "en": "Spatial / immersive", "de": "Räumlich / immersiv" },
+      { "en": "Something else", "de": "Etwas anderes" }
+    ],
+    "messageLabel": { "en": "Tell us about it", "de": "Erzählen Sie davon" },
+    "messagePlaceholder": { "en": "A few lines about your project, timeline and budget…", "de": "Ein paar Zeilen zu Projekt, Zeitrahmen und Budget…" },
+    "submit": { "en": "Send enquiry", "de": "Anfrage senden" },
+    "note": { "en": "Demo form — not connected yet", "de": "Demo-Formular — noch nicht verbunden" }
+  },
+  "info": {
+    "emailHeading": { "en": "Email", "de": "E-Mail" },
+    "studioHeading": { "en": "Studio", "de": "Studio" },
+    "studioLocation": "Berlin, DE",
+    "studioText": { "en": "Working with teams worldwide.", "de": "Wir arbeiten mit Teams weltweit." },
+    "availabilityHeading": { "en": "Availability", "de": "Verfügbarkeit" },
+    "availabilityText": { "en": "Booking new projects from Q3 2026. Two slots open.", "de": "Neue Projekte ab Q3 2026. Zwei Plätze frei." },
+    "socials": [
+      { "label": "Instagram", "url": "#" },
+      { "label": "LinkedIn", "url": "#" }
+    ]
+  }
+}

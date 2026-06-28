@@ -1,0 +1,153 @@
+---
+layout: base.njk
+title: AETHER — Creative Studio for What Comes Next
+description: AETHER is an independent creative studio building brand identities, motion and interfaces that feel alive — for the brands defining what comes next.
+permalink: /index.html
+---
+
+    <!-- ================================ HERO ================================ -->
+    <section class="hero container" data-hero>
+      <div class="hero__light deco"></div>
+
+      <div class="hero__floaties deco" aria-hidden="true">
+        {%- for chip in home.hero.chips %}
+        <span class="hero__chip hero__chip--{{ loop.index }} glass glass--pill"><span class="dot"></span><span data-en="{{ chip.en }}" data-de="{{ chip.de }}">{{ chip.en }}</span></span>
+        {%- endfor %}
+      </div>
+
+      <div class="hero__inner">
+        <span class="eyebrow hero__eyebrow"><span class="pip deco"></span><span data-en="{{ home.hero.eyebrow.en }}" data-de="{{ home.hero.eyebrow.de }}">{{ home.hero.eyebrow.en }}</span></span>
+
+        <h1 class="hero__title">
+          <span class="line"><span data-en="{{ home.hero.line1.en }}" data-de="{{ home.hero.line1.de }}">{{ home.hero.line1.en }}</span></span>
+          <span class="line"><span data-en="{{ home.hero.line2.en }}" data-de="{{ home.hero.line2.de }}">{{ home.hero.line2.en }}</span></span>
+          <span class="line"><span class="accent" data-en="{{ home.hero.line3.en }}" data-de="{{ home.hero.line3.de }}">{{ home.hero.line3.en }}</span></span>
+        </h1>
+
+        <p class="hero__lead" data-en="{{ home.hero.lead.en }}" data-de="{{ home.hero.lead.de }}">{{ home.hero.lead.en }}</p>
+
+        <div class="hero__cta">
+          <a class="btn btn--solid btn--lg" href="{{ home.hero.ctaPrimary.url }}" data-magnetic="0.4">
+            <span data-en="{{ home.hero.ctaPrimary.en }}" data-de="{{ home.hero.ctaPrimary.de }}">{{ home.hero.ctaPrimary.en }}</span>
+            <svg class="btn__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--glass btn--lg" href="{{ home.hero.ctaSecondary.url }}" data-magnetic="0.4" data-en="{{ home.hero.ctaSecondary.en }}" data-de="{{ home.hero.ctaSecondary.de }}">{{ home.hero.ctaSecondary.en }}</a>
+        </div>
+      </div>
+
+      <a class="hero__cue" href="#capabilities" aria-hidden="true">
+        <span class="track deco"></span>
+        <span data-en="{{ home.hero.scroll.en }}" data-de="{{ home.hero.scroll.de }}">{{ home.hero.scroll.en }}</span>
+      </a>
+    </section>
+
+    <!-- ============================== MARQUEE ============================== -->
+    <section class="section--tight" aria-label="Disciplines">
+      <div class="marquee" data-reveal="fade">
+        <div class="marquee__track">{% for m in home.marquee %}<span class="marquee__item">{{ m }}</span>{% endfor %}</div>
+        <div class="marquee__track" aria-hidden="true">{% for m in home.marquee %}<span class="marquee__item">{{ m }}</span>{% endfor %}</div>
+      </div>
+    </section>
+
+    <!-- ============================= MANIFESTO ============================= -->
+    <section class="manifesto" data-text-reveal>
+      <div class="manifesto__sticky container">
+        <p class="manifesto__text" data-words data-words-en="{{ home.manifesto.en }}" data-words-de="{{ home.manifesto.de }}"></p>
+        <span class="manifesto__sig" data-en="{{ home.manifesto.sig.en }}" data-de="{{ home.manifesto.sig.de }}">{{ home.manifesto.sig.en }}</span>
+      </div>
+    </section>
+
+    <!-- ===================== CAPABILITIES (selections) ===================== -->
+    <section class="section" id="capabilities">
+      <div class="container selector" data-selector>
+        <div class="section-head section-head--center" data-reveal>
+          <span class="eyebrow" data-en="{{ home.capabilities.eyebrow.en }}" data-de="{{ home.capabilities.eyebrow.de }}">{{ home.capabilities.eyebrow.en }}</span>
+          <h2 class="section-head__title" data-en="{{ home.capabilities.title.en }}" data-de="{{ home.capabilities.title.de }}">{{ home.capabilities.title.en }}</h2>
+        </div>
+
+        <div class="segmented glass glass--pill" role="tablist" data-reveal="scale" aria-label="Select a discipline">
+          <span class="segmented__thumb deco"></span>
+          {%- for d in home.capabilities.disciplines %}
+          <button type="button" class="segmented__btn{% if loop.first %} is-active{% endif %}" data-en="{{ d.tab.en }}" data-de="{{ d.tab.de }}">{{ d.tab.en }}</button>
+          {%- endfor %}
+        </div>
+
+        <div class="selector__stage">
+          {%- for d in home.capabilities.disciplines %}
+          <article class="selector__panel{% if loop.first %} is-active{% endif %}">
+            <div class="selector__copy">
+              <h3 data-en="{{ d.title.en }}" data-de="{{ d.title.de }}">{{ d.title.en }}</h3>
+              <p class="muted measure" data-en="{{ d.text.en }}" data-de="{{ d.text.de }}">{{ d.text.en }}</p>
+              <div class="selector__list">
+                {%- for c in d.chips %}
+                <span class="selector__chip" data-en="{{ c.en }}" data-de="{{ c.de }}">{{ c.en }}</span>
+                {%- endfor %}
+              </div>
+            </div>
+            <div class="selector__visual glass"><div class="selector__visual-art deco"></div><span class="selector__glyph">{{ d.glyph }}</span></div>
+          </article>
+          {%- endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== SHOWCASE ============================== -->
+    <section class="showcase" data-horizontal id="work">
+      <div class="showcase__pin">
+        <div class="showcase__head">
+          <div>
+            <span class="eyebrow" data-en="{{ home.showcase.eyebrow.en }}" data-de="{{ home.showcase.eyebrow.de }}">{{ home.showcase.eyebrow.en }}</span>
+            <h2 class="section-head__title" data-en="{{ home.showcase.title.en }}" data-de="{{ home.showcase.title.de }}">{{ home.showcase.title.en }}</h2>
+          </div>
+          <div class="showcase__progress deco" aria-hidden="true"><i></i></div>
+        </div>
+
+        <div class="showcase__track">
+          {%- for t in home.showcase.tiles %}
+          <article class="tile"><div class="tile__media deco" style="--tile-angle:{{ t.angle }}deg"></div><div class="tile__overlay deco"></div><span class="tile__tag" data-en="{{ t.tag.en }}" data-de="{{ t.tag.de }}">{{ t.tag.en }}</span><h3 class="tile__title">{{ t.title }}</h3><p class="tile__meta" data-en="{{ t.meta.en }}" data-de="{{ t.meta.de }}">{{ t.meta.en }}</p></article>
+          {%- endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================== STATS =============================== -->
+    <section class="section">
+      <div class="container stats-grid" data-reveal-group="120">
+        {%- for s in home.stats %}
+        <div class="stat" data-reveal><span class="stat__num tnum"><span data-count="{{ s.value }}"{% if s.suffix %} data-suffix="{{ s.suffix }}"{% endif %}>0</span></span><span class="stat__label" data-en="{{ s.label.en }}" data-de="{{ s.label.de }}">{{ s.label.en }}</span></div>
+        {%- endfor %}
+      </div>
+    </section>
+
+    <!-- ============================== PROCESS ============================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow" data-en="{{ home.process.eyebrow.en }}" data-de="{{ home.process.eyebrow.de }}">{{ home.process.eyebrow.en }}</span>
+          <h2 class="section-head__title" data-en="{{ home.process.title.en }}" data-de="{{ home.process.title.de }}">{{ home.process.title.en }}</h2>
+        </div>
+        <div class="steps" data-reveal-group="110">
+          {%- for step in home.process.steps %}
+          <div class="step" data-reveal><span class="step__no">{{ step.no }}</span><div><h3 class="step__title" data-en="{{ step.title.en }}" data-de="{{ step.title.de }}">{{ step.title.en }}</h3><p class="step__text" data-en="{{ step.text.en }}" data-de="{{ step.text.de }}">{{ step.text.en }}</p></div></div>
+          {%- endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================== CTA =============================== -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band__inner glass glass--strong" data-tilt="3" data-reveal="scale">
+          <div class="cta-band__glow deco"></div>
+          <h2 class="cta-band__title" data-en="{{ home.cta.title.en }}" data-de="{{ home.cta.title.de }}">{{ home.cta.title.en }}</h2>
+          <p class="cta-band__sub" data-en="{{ home.cta.sub.en }}" data-de="{{ home.cta.sub.de }}">{{ home.cta.sub.en }}</p>
+          <div class="cta-band__actions">
+            <a class="btn btn--solid btn--lg" href="{{ home.cta.primary.url }}" data-magnetic="0.4">
+              <span data-en="{{ home.cta.primary.en }}" data-de="{{ home.cta.primary.de }}">{{ home.cta.primary.en }}</span>
+              <svg class="btn__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--ghost btn--lg" href="{{ home.cta.secondary.url }}" data-magnetic="0.3" data-en="{{ home.cta.secondary.en }}" data-de="{{ home.cta.secondary.de }}">{{ home.cta.secondary.en }}</a>
+          </div>
+        </div>
+      </div>
+    </section>

@@ -1,0 +1,28 @@
+{
+  "brand": "AETHER",
+  "languages": ["en", "de"],
+  "email": "hello@aether.studio",
+  "location": "Berlin · Remote",
+  "availability": { "en": "Open for Q3 2026", "de": "Verfügbar ab Q3 2026" },
+  "nav": [
+    { "url": "/pages/overview/", "label": { "en": "Overview", "de": "Überblick" } },
+    { "url": "/pages/tech/", "label": { "en": "Tech", "de": "Technik" } },
+    { "url": "/pages/showcase/", "label": { "en": "Showcase", "de": "Showcase" } },
+    { "url": "/pages/about/", "label": { "en": "About", "de": "Über uns" } }
+  ],
+  "contactNav": { "url": "/pages/contact/", "en": "Contact", "de": "Kontakt" },
+  "footer": {
+    "tagline": {
+      "en": "A creative studio for what comes next. Berlin & everywhere.",
+      "de": "Ein Kreativstudio für das, was kommt. Berlin & überall."
+    },
+    "studioHeading": { "en": "Studio", "de": "Studio" },
+    "connectHeading": { "en": "Connect", "de": "Kontakt" },
+    "connect": [
+      { "label": "Instagram", "url": "#" },
+      { "label": "Behance", "url": "#" },
+      { "label": "LinkedIn", "url": "#" }
+    ],
+    "rights": { "en": "All rights reserved.", "de": "Alle Rechte vorbehalten." }
+  }
+}

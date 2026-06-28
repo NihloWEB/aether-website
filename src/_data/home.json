@@ -1,0 +1,125 @@
+{
+  "hero": {
+    "eyebrow": { "en": "Independent creative studio", "de": "Unabhängiges Kreativstudio" },
+    "line1": { "en": "We craft", "de": "Wir gestalten" },
+    "line2": { "en": "brands that", "de": "Marken, die" },
+    "line3": { "en": "feel alive.", "de": "lebendig sind." },
+    "lead": {
+      "en": "AETHER is a design studio shaping identities, motion and interfaces that move — for the brands defining what comes next.",
+      "de": "AETHER ist ein Designstudio für Identitäten, Motion und Interfaces, die sich bewegen — für die Marken von morgen."
+    },
+    "ctaPrimary": { "en": "View work", "de": "Arbeiten ansehen", "url": "/pages/showcase/" },
+    "ctaSecondary": { "en": "Start a project", "de": "Projekt starten", "url": "/pages/contact/" },
+    "chips": [
+      { "en": "Brand", "de": "Marke" },
+      { "en": "Motion", "de": "Motion" },
+      { "en": "Spatial", "de": "Räumlich" }
+    ],
+    "scroll": { "en": "Scroll", "de": "Scrollen" }
+  },
+  "marquee": ["Brand Identity", "Motion", "Interface", "Spatial", "Art Direction", "Strategy"],
+  "manifesto": {
+    "en": "We believe design should breathe — every surface, every motion, every detail alive, intentional, unforgettable.",
+    "de": "Wir glauben, Design sollte atmen — jede Fläche, jede Bewegung, jedes Detail lebendig, bewusst, unvergesslich.",
+    "sig": { "en": "The AETHER principle", "de": "Das AETHER-Prinzip" }
+  },
+  "capabilities": {
+    "eyebrow": { "en": "Capabilities", "de": "Leistungen" },
+    "title": { "en": "Four disciplines. One signature.", "de": "Vier Disziplinen. Eine Handschrift." },
+    "disciplines": [
+      {
+        "tab": { "en": "Brand", "de": "Marke" },
+        "glyph": "B",
+        "title": { "en": "Brand systems", "de": "Markensysteme" },
+        "text": {
+          "en": "Identities built as living systems — logotype, type, color and voice that adapt across every surface without losing their soul.",
+          "de": "Identitäten als lebendige Systeme — Logotype, Schrift, Farbe und Tonalität, die sich überall anpassen, ohne ihre Seele zu verlieren."
+        },
+        "chips": [
+          { "en": "Identity", "de": "Identität" },
+          { "en": "Naming", "de": "Naming" },
+          { "en": "Guidelines", "de": "Richtlinien" },
+          { "en": "Type design", "de": "Schriftdesign" }
+        ]
+      },
+      {
+        "tab": { "en": "Motion", "de": "Motion" },
+        "glyph": "M",
+        "title": { "en": "Motion & film", "de": "Motion & Film" },
+        "text": {
+          "en": "Story told in movement. Title sequences, product films and micro-interactions tuned frame by frame to feel inevitable.",
+          "de": "Geschichten in Bewegung. Titelsequenzen, Produktfilme und Mikrointeraktionen — Bild für Bild auf den Punkt gebracht."
+        },
+        "chips": [
+          { "en": "Title design", "de": "Titeldesign" },
+          { "en": "3D", "de": "3D" },
+          { "en": "Sound", "de": "Sound" },
+          { "en": "Direction", "de": "Regie" }
+        ]
+      },
+      {
+        "tab": { "en": "Interface", "de": "Interface" },
+        "glyph": "I",
+        "title": { "en": "Interfaces", "de": "Interfaces" },
+        "text": {
+          "en": "Digital products with craft in every pixel — design systems, prototypes and front-end engineering that ship and scale.",
+          "de": "Digitale Produkte mit Handwerk in jedem Pixel — Designsysteme, Prototypen und Frontend-Engineering, das skaliert."
+        },
+        "chips": [
+          { "en": "Product UI", "de": "Produkt-UI" },
+          { "en": "Design systems", "de": "Designsysteme" },
+          { "en": "Prototyping", "de": "Prototyping" },
+          { "en": "Front-end", "de": "Frontend" }
+        ]
+      },
+      {
+        "tab": { "en": "Spatial", "de": "Räumlich" },
+        "glyph": "S",
+        "title": { "en": "Spatial & immersive", "de": "Räumlich & immersiv" },
+        "text": {
+          "en": "Experiences you can step into — installations, real-time 3D and interfaces for the spatial computing era.",
+          "de": "Erlebnisse zum Betreten — Installationen, Echtzeit-3D und Interfaces für das räumliche Computing."
+        },
+        "chips": [
+          { "en": "Installations", "de": "Installationen" },
+          { "en": "Real-time 3D", "de": "Echtzeit-3D" },
+          { "en": "WebGL", "de": "WebGL" },
+          { "en": "XR", "de": "XR" }
+        ]
+      }
+    ]
+  },
+  "showcase": {
+    "eyebrow": { "en": "Selected work", "de": "Ausgewählte Arbeiten" },
+    "title": { "en": "A few recent worlds.", "de": "Einige neue Welten." },
+    "tiles": [
+      { "angle": 35, "title": "Helix", "tag": { "en": "Brand", "de": "Marke" }, "meta": { "en": "Identity system · 2025", "de": "Identitätssystem · 2025" } },
+      { "angle": 120, "title": "Northwind", "tag": { "en": "Motion", "de": "Motion" }, "meta": { "en": "Title sequence · 2025", "de": "Titelsequenz · 2025" } },
+      { "angle": 75, "title": "Aurora OS", "tag": { "en": "Interface", "de": "Interface" }, "meta": { "en": "Product design · 2024", "de": "Produktdesign · 2024" } },
+      { "angle": 160, "title": "Monolith", "tag": { "en": "Spatial", "de": "Räumlich" }, "meta": { "en": "Installation · 2024", "de": "Installation · 2024" } },
+      { "angle": 95, "title": "Veil", "tag": { "en": "Web", "de": "Web" }, "meta": { "en": "Site of the year · 2023", "de": "Site des Jahres · 2023" } },
+      { "angle": 50, "title": "Pulse", "tag": { "en": "Film", "de": "Film" }, "meta": { "en": "Brand film · 2023", "de": "Markenfilm · 2023" } }
+    ]
+  },
+  "stats": [
+    { "value": 120, "suffix": "+", "label": { "en": "Projects shipped", "de": "Projekte umgesetzt" } },
+    { "value": 18, "suffix": "", "label": { "en": "Awards", "de": "Auszeichnungen" } },
+    { "value": 9, "suffix": "", "label": { "en": "Years in motion", "de": "Jahre in Bewegung" } },
+    { "value": 14, "suffix": "", "label": { "en": "People worldwide", "de": "Menschen weltweit" } }
+  ],
+  "process": {
+    "eyebrow": { "en": "How we work", "de": "Arbeitsweise" },
+    "title": { "en": "From spark to signal.", "de": "Vom Funken zum Signal." },
+    "steps": [
+      { "no": "01", "title": { "en": "Discover", "de": "Entdecken" }, "text": { "en": "We dig into your world — audience, ambition and the tension worth designing around.", "de": "Wir tauchen in Ihre Welt ein — Zielgruppe, Ambition und die Spannung, um die es sich zu gestalten lohnt." } },
+      { "no": "02", "title": { "en": "Design", "de": "Gestalten" }, "text": { "en": "We shape the system in the open — fast, tactile, motion-first, never precious.", "de": "Wir formen das System offen — schnell, greifbar, motion-first, nie verkrampft." } },
+      { "no": "03", "title": { "en": "Deliver", "de": "Umsetzen" }, "text": { "en": "We build it for real and hand over a living toolkit your team can run with.", "de": "Wir setzen es wirklich um und übergeben ein lebendiges Toolkit für Ihr Team." } }
+    ]
+  },
+  "cta": {
+    "title": { "en": "Let's build something alive.", "de": "Bauen wir etwas Lebendiges." },
+    "sub": { "en": "Have a brand, a product or a wild idea? We'd love to hear where you're headed.", "de": "Eine Marke, ein Produkt oder eine kühne Idee? Wir hören, wohin die Reise geht." },
+    "primary": { "en": "Start a project", "de": "Projekt starten", "url": "/pages/contact/" },
+    "secondary": { "en": "Meet the studio", "de": "Studio kennenlernen", "url": "/pages/about/" }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "hero": {
+    "eyebrow": { "en": "Overview", "de": "Überblick" },
+    "title": { "en": "The studio, in full.", "de": "Das Studio im Überblick." },
+    "lead": { "en": "AETHER is a small, senior team designing across brand, motion, interface and spatial — under one roof, with one obsessive standard.", "de": "AETHER ist ein kleines, erfahrenes Team für Brand, Motion, Interface und Räumliches — unter einem Dach, mit einem kompromisslosen Anspruch." }
+  },
+  "intro": {
+    "heading": { "en": "We treat every project as a living system, not a static deliverable.", "de": "Wir behandeln jedes Projekt als lebendiges System, nicht als statisches Ergebnis." },
+    "paragraphs": [
+      { "en": "That means identities that flex, interfaces that respond, and motion baked in from the first sketch — so the work feels inevitable in every context it lands.", "de": "Das bedeutet: flexible Identitäten, reaktive Interfaces und Motion von der ersten Skizze an — damit die Arbeit in jedem Kontext selbstverständlich wirkt." },
+      { "en": "Below is a quick map. Dive into Tech for the how, or Showcase for the proof.", "de": "Unten eine kurze Übersicht. Mehr zum Wie unter Technik, mehr Beweise unter Showcase." }
+    ],
+    "placeholder": { "en": "Full capabilities deck — coming soon", "de": "Komplettes Leistungs-Deck — bald verfügbar" }
+  },
+  "disciplinesHeading": {
+    "eyebrow": { "en": "What we do", "de": "Was wir tun" },
+    "title": { "en": "Four disciplines.", "de": "Vier Disziplinen." }
+  },
+  "disciplines": [
+    { "title": { "en": "Brand", "de": "Marke" }, "text": { "en": "Identity systems, naming, voice and type.", "de": "Identitätssysteme, Naming, Tonalität und Schrift." } },
+    { "title": { "en": "Motion", "de": "Motion" }, "text": { "en": "Film, title design, 3D and micro-interaction.", "de": "Film, Titeldesign, 3D und Mikrointeraktion." } },
+    { "title": { "en": "Interface", "de": "Interface" }, "text": { "en": "Product UI, design systems and front-end.", "de": "Produkt-UI, Designsysteme und Frontend." } },
+    { "title": { "en": "Spatial", "de": "Räumlich" }, "text": { "en": "Installations, real-time 3D and XR.", "de": "Installationen, Echtzeit-3D und XR." } }
+  ],
+  "cta": {
+    "title": { "en": "See it in motion.", "de": "Sieh es in Bewegung." },
+    "sub": { "en": "The showcase is where the studio comes alive.", "de": "Im Showcase erwacht das Studio zum Leben." },
+    "primary": { "en": "View showcase", "de": "Showcase ansehen", "url": "/pages/showcase/" }
+  }
+}

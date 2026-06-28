@@ -1,0 +1,41 @@
+---
+layout: base.njk
+title: Showcase — AETHER
+description: Selected work from AETHER across brand, motion, interface and spatial design.
+---
+
+    <section class="page-hero container">
+      <div class="page-hero__light deco"></div>
+      <span class="eyebrow page-hero__eyebrow" data-reveal="fade" data-en="{{ showcase.hero.eyebrow.en }}" data-de="{{ showcase.hero.eyebrow.de }}">{{ showcase.hero.eyebrow.en }}</span>
+      <h1 class="page-hero__title ink-shine" data-reveal data-en="{{ showcase.hero.title.en }}" data-de="{{ showcase.hero.title.de }}">{{ showcase.hero.title.en }}</h1>
+      <p class="page-hero__lead" data-reveal data-en="{{ showcase.hero.lead.en }}" data-de="{{ showcase.hero.lead.de }}">{{ showcase.hero.lead.en }}</p>
+      <div style="margin-top:var(--s-6); display:flex; flex-wrap:wrap; gap:var(--s-2); align-items:center" data-reveal="fade">
+        {%- for f in showcase.filters %}
+        <span class="selector__chip" data-en="{{ f.en }}" data-de="{{ f.de }}">{{ f.en }}</span>
+        {%- endfor %}
+        <span class="placeholder" data-en="{{ showcase.filterNote.en }}" data-de="{{ showcase.filterNote.de }}">{{ showcase.filterNote.en }}</span>
+      </div>
+    </section>
+
+    <section class="section--tight">
+      <div class="container">
+        <div class="grid-3" data-reveal-group="80">
+          {%- for t in showcase.tiles %}
+          <article class="tile tile--grid" data-reveal><div class="tile__media deco" style="--tile-angle:{{ t.angle }}deg"></div><div class="tile__overlay deco"></div><span class="tile__tag" data-en="{{ t.tag.en }}" data-de="{{ t.tag.de }}">{{ t.tag.en }}</span><h3 class="tile__title">{{ t.title }}</h3><p class="tile__meta" data-en="{{ t.meta.en }}" data-de="{{ t.meta.de }}">{{ t.meta.en }}</p></article>
+          {%- endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-band__inner glass glass--strong" data-tilt="3" data-reveal="scale">
+          <div class="cta-band__glow deco"></div>
+          <h2 class="cta-band__title" data-en="{{ showcase.cta.title.en }}" data-de="{{ showcase.cta.title.de }}">{{ showcase.cta.title.en }}</h2>
+          <p class="cta-band__sub" data-en="{{ showcase.cta.sub.en }}" data-de="{{ showcase.cta.sub.de }}">{{ showcase.cta.sub.en }}</p>
+          <div class="cta-band__actions">
+            <a class="btn btn--solid btn--lg" href="{{ showcase.cta.primary.url }}" data-magnetic="0.4"><span data-en="{{ showcase.cta.primary.en }}" data-de="{{ showcase.cta.primary.de }}">{{ showcase.cta.primary.en }}</span><svg class="btn__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
