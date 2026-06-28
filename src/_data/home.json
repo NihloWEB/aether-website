@@ -269,12 +269,22 @@
           "de": "Entdecken"
         },
         "text": {
-          "en": "We dig into your world — audience, ambition and the tension worth designing around.",
-          "de": "Wir tauchen in Ihre Welt ein — Zielgruppe, Ambition und die Spannung, um die es sich zu gestalten lohnt."
+          "en": "Iam searching without a goal until I find my Goal. Alive, Modern, Interactive.",
+          "de": "Ich suche ziellos bis ich die passende Idee finde. Lebendig, Modern, Interaktiv."
         }
       },
       {
         "no": "02",
+        "title": {
+          "en": "Briefing",
+          "de": "Planung"
+        },
+        "text": {
+          "en": "Lets brief and collect ideas and gather insperation "
+        }
+      },
+      {
+        "no": "03",
         "title": {
           "en": "Design",
           "de": "Gestalten"
@@ -285,7 +295,7 @@
         }
       },
       {
-        "no": "03",
+        "no": "04",
         "title": {
           "en": "Deliver",
           "de": "Umsetzen"
