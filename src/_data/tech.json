@@ -45,12 +45,12 @@
       },
       {
         "title": {
-          "en": "Design tokens",
-          "de": "Design-Tokens"
+          "en": "Interaction",
+          "de": "Interaktion"
         },
         "text": {
-          "en": "One source of truth that flows from Figma to production CSS.",
-          "de": "Eine einzige Quelle der Wahrheit — von Figma bis zum produktiven CSS."
+          "en": "Every click every reaction from it. Make it feel special.",
+          "de": "Jeder click jede reaktion darauf. Lass es besonders sein."
         }
       },
       {
