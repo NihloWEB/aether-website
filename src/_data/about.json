@@ -23,8 +23,8 @@
       "de": "Woran ich glaube"
     },
     "title": {
-      "en": "Three values.",
-      "de": "Drei Werte."
+      "en": "Two values.",
+      "de": "Zwei Werte."
     },
     "items": [
       {
@@ -47,17 +47,6 @@
         "text": {
           "en": "Few projects, deeply done. We'd rather go further than wider.",
           "de": "Wenige Projekte, ins Detail gedacht. Lieber weiter als breiter."
-        }
-      },
-      {
-        "no": "03",
-        "title": {
-          "en": "Partners over clients",
-          "de": "Partner statt Kunden"
-        },
-        "text": {
-          "en": "We build with you, in the open, and leave you stronger than we found you.",
-          "de": "Wir bauen mit Ihnen, offen, und hinterlassen Sie stärker als zuvor."
         }
       }
     ]
