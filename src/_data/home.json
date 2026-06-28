@@ -110,39 +110,6 @@
       },
       {
         "tab": {
-          "en": "Motion",
-          "de": "Motion"
-        },
-        "glyph": "M",
-        "title": {
-          "en": "Motion & film",
-          "de": "Motion & Film"
-        },
-        "text": {
-          "en": "Story told in movement. Title sequences, product films and micro-interactions tuned frame by frame to feel inevitable.",
-          "de": "Geschichten in Bewegung. Titelsequenzen, Produktfilme und Mikrointeraktionen — Bild für Bild auf den Punkt gebracht."
-        },
-        "chips": [
-          {
-            "en": "Title design",
-            "de": "Titeldesign"
-          },
-          {
-            "en": "3D",
-            "de": "3D"
-          },
-          {
-            "en": "Sound",
-            "de": "Sound"
-          },
-          {
-            "en": "Direction",
-            "de": "Regie"
-          }
-        ]
-      },
-      {
-        "tab": {
           "en": "Interface",
           "de": "Interface"
         },
@@ -152,8 +119,8 @@
           "de": "Interfaces"
         },
         "text": {
-          "en": "Digital products with craft in every pixel — design systems, prototypes and front-end engineering that ship and scale.",
-          "de": "Digitale Produkte mit Handwerk in jedem Pixel — Designsysteme, Prototypen und Frontend-Engineering, das skaliert."
+          "en": "Design systems, prototypes and front-end engineering which leads to marvel.",
+          "de": "Designsysteme, Prototypen und Frontend-Engineering, welches staunen lässt."
         },
         "chips": [
           {
