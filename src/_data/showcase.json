@@ -62,14 +62,14 @@
     },
     {
       "angle": 75,
-      "title": "Aurora OS",
+      "title": "Noten Lernen",
       "tag": {
-        "en": "Interface",
-        "de": "Interface"
+        "en": "Learning & practicing app",
+        "de": "Lern & Übungs App"
       },
       "meta": {
-        "en": "Product design · 2024",
-        "de": "Produktdesign · 2024"
+        "en": "Music learning app · 2026",
+        "de": "Musik Lern App · 2026"
       }
     }
   ],
