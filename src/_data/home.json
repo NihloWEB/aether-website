@@ -222,7 +222,7 @@
   },
   "stats": [
     {
-      "value": 120,
+      "value": 2,
       "suffix": "+",
       "label": {
         "en": "Projects shipped",
@@ -230,24 +230,25 @@
       }
     },
     {
-      "value": 18,
+      "value": 0,
+      "suffix": ":(",
       "label": {
-        "en": "Awards",
-        "de": "Auszeichnungen"
+        "en": "Partners",
+        "de": "Partner"
       }
     },
     {
-      "value": 9,
+      "value": 0,
       "label": {
         "en": "Years in motion",
         "de": "Jahre in Bewegung"
       }
     },
     {
-      "value": 14,
+      "value": 1,
       "label": {
-        "en": "People worldwide",
-        "de": "Menschen weltweit"
+        "en": "Dude worldwide",
+        "de": "Mensch"
       }
     }
   ],
