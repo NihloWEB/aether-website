@@ -183,7 +183,7 @@
     },
     "tiles": [
       {
-        "angle": 35,
+        "angle": 1,
         "title": "FiveM Server - Teamboard",
         "tag": {
           "en": "Teamboard",
