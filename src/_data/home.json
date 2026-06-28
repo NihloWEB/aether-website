@@ -71,19 +71,19 @@
       "de": "Leistungen"
     },
     "title": {
-      "en": "Four disciplines. One signature.",
-      "de": "Vier Disziplinen. Eine Handschrift."
+      "en": "Three disciplines. One signature.",
+      "de": "Drei Disziplinen. Eine Handschrift."
     },
     "disciplines": [
       {
         "tab": {
-          "en": "Brand",
-          "de": "Marke"
+          "en": "WEB-Design",
+          "de": "WEB-Design"
         },
         "glyph": "B",
         "title": {
-          "en": "Brand systems",
-          "de": "Markensysteme"
+          "en": "Designs",
+          "de": "Designs"
         },
         "text": {
           "en": "Identities built as living systems — logotype, type, color and voice that adapt across every surface without losing their soul.",
