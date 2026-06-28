@@ -32,16 +32,16 @@
     },
     "chips": [
       {
-        "en": "Brand",
-        "de": "Marke"
+        "en": "WEB-Design",
+        "de": "WEB-Design"
       },
       {
-        "en": "Motion",
-        "de": "Motion"
+        "en": "Design",
+        "de": "Design"
       },
       {
-        "en": "Spatial",
-        "de": "Räumlich"
+        "en": "Interface / UI",
+        "de": "Interface / UI"
       }
     ],
     "scroll": {
