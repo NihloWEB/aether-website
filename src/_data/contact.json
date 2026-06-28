@@ -75,10 +75,10 @@
       "de": "E-Mail"
     },
     "studioHeading": {
-      "en": "Studio",
-      "de": "Studio"
+      "en": "Location",
+      "de": "Standort"
     },
-    "studioLocation": "Berlin, DE",
+    "studioLocation": "Karlsruhe, DE",
     "studioText": {
       "en": "Working with teams worldwide.",
       "de": "Wir arbeiten mit Teams weltweit."
