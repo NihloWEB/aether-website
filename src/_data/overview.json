@@ -39,8 +39,8 @@
       "de": "Was ich mache?"
     },
     "title": {
-      "en": "Four disciplines.",
-      "de": "Vier Disziplinen."
+      "en": "Three disciplines.",
+      "de": "Drei Disziplinen."
     }
   },
   "disciplines": [
@@ -72,16 +72,6 @@
       "text": {
         "en": "Product UI, design systems and front-end.",
         "de": "Produkt-UI, Designsysteme und Frontend."
-      }
-    },
-    {
-      "title": {
-        "en": "Spatial",
-        "de": "Räumlich"
-      },
-      "text": {
-        "en": "Installations, real-time 3D and XR.",
-        "de": "Installationen, Echtzeit-3D und XR."
       }
     }
   ],
