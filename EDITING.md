@@ -14,7 +14,7 @@ Bearbeiten im Browser, ohne Code, mit beschrifteten Feldern.
 
 **Einmalig einrichten:**
 1. Gehe auf **<https://app.pagescms.org>** → **Sign in with GitHub**.
-2. Pages CMS für das Repo **`NihloWEB/aether-website`** autorisieren.
+2. Pages CMS für das Repo **`NihloWEB/enak-website`** autorisieren.
 3. Das Projekt erscheint mit allen Inhaltsgruppen (Global, Home, Overview, Tech,
    Showcase, About, Contact) — die Struktur kommt aus **`.pages.yml`**.
 

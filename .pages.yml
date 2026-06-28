@@ -1,7 +1,7 @@
 # ============================================================
 #  Pages CMS configuration  ·  https://pagescms.org
 #  Edit content at https://app.pagescms.org → sign in with
-#  GitHub → open "NihloWEB/aether-website". Saving commits to
+#  GitHub → open "NihloWEB/enak-website". Saving commits to
 #  GitHub, which triggers a Vercel build & deploy.
 #  Bilingual fields are objects with `en` (English) + `de` (Deutsch).
 # ============================================================
