@@ -143,13 +143,13 @@
       },
       {
         "tab": {
-          "en": "Spatial",
-          "de": "Räumlich"
+          "en": "Design",
+          "de": "Design"
         },
-        "glyph": "S",
+        "glyph": "D",
         "title": {
-          "en": "Spatial & immersive",
-          "de": "Räumlich & immersiv"
+          "en": "Design with a twist",
+          "de": "Design mal anders"
         },
         "text": {
           "en": "Experiences you can step into — installations, real-time 3D and interfaces for the spatial computing era.",
