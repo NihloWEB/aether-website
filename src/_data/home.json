@@ -184,14 +184,14 @@
     "tiles": [
       {
         "angle": 35,
-        "title": "Helix",
+        "title": "FiveM Server - Teamboard",
         "tag": {
-          "en": "Brand",
-          "de": "Marke"
+          "en": "Teamboard",
+          "de": "Teamboard"
         },
         "meta": {
-          "en": "Identity system · 2025",
-          "de": "Identitätssystem · 2025"
+          "en": "Teamboard system · 2026",
+          "de": "Teammanagement System · 2026"
         }
       },
       {
