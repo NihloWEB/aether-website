@@ -184,20 +184,6 @@
     },
     "tiles": [
       {
-        "angle": 1,
-        "slug": "teamboard",
-        "thumb": "/assets/img/showcase/teamboard-thumb.svg",
-        "title": "FiveM Server - Teamboard",
-        "tag": {
-          "en": "Teamboard",
-          "de": "Teamboard"
-        },
-        "meta": {
-          "en": "Teamboard system · 2026",
-          "de": "Teammanagement System · 2026"
-        }
-      },
-      {
         "angle": 120,
         "slug": "bw-trainer",
         "thumb": "/assets/img/showcase/bw-trainer-thumb.svg",
