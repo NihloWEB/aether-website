@@ -9,6 +9,7 @@
 media:
   input: assets/img
   output: /assets/img
+  extensions: [jpg, jpeg, png, webp, gif, svg, avif]
 
 content:
   # ---------------------------------------------------------- GLOBAL
@@ -307,7 +308,7 @@ content:
             type: object
             list: true
             fields:
-              - { name: images, label: Images, type: image, list: true }
+              - { name: images, label: Images, type: image, options: { multiple: true } }
       - name: cta
         label: CTA
         type: object
